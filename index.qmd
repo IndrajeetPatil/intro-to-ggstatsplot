@@ -186,7 +186,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 
 ## Example function {.smaller}
 
-E.g., for hypothesis about group differences
+E.g., for hypothesis about differences *between* groups
 
 :::: {.columns}
 
@@ -323,7 +323,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 :::{style="background-color: #FDE7BB; padding: 15px; border-radius: 25px; text-align: center;"}
 
-✅  Encourages best practices in data visualization and statistical reporting!
+✅ Follows best practices in data visualization and statistical reporting!
 
 :::
 
