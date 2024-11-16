@@ -56,12 +56,11 @@ Indrajeet Patil<br>
 
 Why a new package?
 
-## Life in the trenches (c. 2017) {.smaller}
-
 :::{style="font-size: 20px;"}
-(as an academic researcher)
+(Or why did a social psychologist get into software development?)
 :::
 
+## Life in the trenches (c. 2017, Harvard) {.smaller}
 
 :::: {.columns}
 
@@ -114,13 +113,17 @@ and more...
 
 Information-rich, ready-made statistical visualizations
 
-## Defaulting to a rich graphic {.smaller}
+:::{style="font-size: 20px;"}
+(minimal effort and maximum transparency)
+:::
+
+## A visualization with statistical summary {.smaller}
 
 ![](media/datasaurus.gif)
 
 :::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
 
-💡 **Visualizations** reveal problems not discernible from **descriptive** statistics!
+💡 **Visualizations** reveal problems not discernible from **model summaries**!
 
 :::
 
@@ -128,7 +131,7 @@ Information-rich, ready-made statistical visualizations
 [(Matejka & Fitzmaurice, *Autodesk Research*,2017)](https://www.autodeskresearch.com/publications/samestats)
 :::
 
-## One-line syntax for producing plots {.smaller}
+## Ready-made plots with one-line syntax {.smaller}
 
 ::::: columns
 
@@ -178,7 +181,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 `{ggstatsplot}` was born!
 
 :::{style="font-size: 20px;"}
-(published on GitHub in 2017 and on CRAN in 2018)
+(published on [GitHub](https://github.com/IndrajeetPatil/ggstatsplot){target='_blank'} in 2017 and on [CRAN](https://CRAN.R-project.org/package=ggstatsplot){target='_blank'} in 2018)
 :::
 
 ## Example function {.smaller}
@@ -280,22 +283,6 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 :::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
 
 ✅ No need to worry about reporting or interpretation errors!
-
-:::
-
-## Simplified data analysis workflow {.smaller}
-
-![](media/ds_workflow.png)
-
-::: footer
-[(Grolemund & Wickham, *R for Data Science*, 2017)](https://r4ds.had.co.nz/)
-:::
-
-<br>
-
-:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
-
-✅ Quick insight into data by combining visualization and modeling!
 
 :::
 
@@ -1318,6 +1305,22 @@ It...
 ::: {.fragment .highlight-current-blue}
 - extremely beginner-friendly
 :::
+
+:::
+
+## Simplified data analysis workflow {.smaller}
+
+![](media/ds_workflow.png)
+
+::: footer
+[(Grolemund & Wickham, *R for Data Science*, 2017)](https://r4ds.had.co.nz/)
+:::
+
+<br>
+
+:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
+
+✅ Quick insight into data by combining visualization and modeling!
 
 :::
 
