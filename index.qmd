@@ -402,7 +402,7 @@ Breaking down the monolith: $20K_{(2017)} \rightarrow 1K_{(2024)}$ lines of code
 
 ```{mermaid}
 %%| echo: false
-flowchart TD
+flowchart LR
     ggstatsplot[ggstatsplot]
     statsExpressions[statsExpressions]
     note["backend engine"]
@@ -441,19 +441,64 @@ flowchart TD
 
 #### 
 
-:::{.callout-tip collapse=false appearance='default' icon=true}
+## Open-source involvement {.smaller}
 
-## Working with open-source teams
+While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
-While re-architecting `{ggstatsplot}`, I started contributing upstream: <br>
+:::: {.columns}
 
-- joined the core `{easystats}` team (a collection of ten component packages)
-- became a co-maintainer of `{ggsignif}`
-- contributed to `{WRS2}` and `{ggcorrplot}`
+::: {.column width='50%'}
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+
+## As part of `{easystats}` core team
+
+- leadership skills to steer the project
+- long-term vision for the project
+- API design
+- CI infrastructure
+- code review
+- documentation
+- scouting for new talent
+- developer advocacy
+- community engagement
 
 :::
 
+:::
+
+::: {.column width='50%'}
+
+![](media/easystats_logo_wall.png){.relative fig-align="center"}
+
+:::
+
+::::
+
+#### Making it a habit
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+- co-maintainer of `{ggsignif}`
+- contributor to `{WRS2}` and `{ggcorrplot}`
+
+:::
+
+::: {.column width='50%'}
+
+- co-author of `{lintr}` (linter for R)
+- co-author of `{styler}` (tidyverse style)
+
+:::
+
+::::
+
 ## Quality Assurance {.smaller}
+
+> "_The only way to go fast, is to go well._"<br>
+>                             \- Robert C. Martin
 
 :::: {.columns}
 
@@ -493,16 +538,6 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream: <br>
 :::
 
 ::::
-
-:::{.callout-tip collapse=false appearance='default' icon=true}
-
-## Working with open-source teams
-
-While improving the QA tooling for `{ggstatsplot}`, I started contributing upstream: <br>
-
-- became co-author of `{lintr}` (linter) and `{styler}` (formatter)
-
-:::
 
 ## Communication {.smaller}
 
@@ -544,9 +579,9 @@ graph LR
     class CodeQuality,ArchDesign,TechDebt,Collab,Leadership,Communication skillNode
 ```
 
-# Conclusion 
+# Conclusion
 
-`{ggstatsplot}` provides an <span style="background-color:#D0E8C5;">accessible interface</span> to create rich statistical visualizations and helps users adopt a <span style="background-color:#FFE31A;">rigorous, reliable, and robust data exploratory and reporting workflows</span> across diverse disciplines and domains in academia and industry alike. It's an actively developed tool with <span style="background-color:#F0C1E1;">quality infrastructure</span> and <span style="background-color:#D4F6FF;">wide adoption</span>.
+`{ggstatsplot}` offers an <span style="background-color:#D0E8C5;">intuitive interface</span> for creating detailed statistical visualizations, enabling users to adopt <span style="background-color:#FFE31A;">rigorous, reliable, and robust workflows for data exploration and reporting</span> across various academic and industrial disciplines. It is a well-maintained tool with <span style="background-color:#F0C1E1;">high-quality infrastructure</span> and <span style="background-color:#D4F6FF;">widespread adoption</span>.
 
 # Thank You 😊
 
