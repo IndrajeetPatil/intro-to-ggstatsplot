@@ -394,7 +394,7 @@ biology, medicine, psychology, economics, etc.
 
 # Pleasant Side Effects
 
-*Maybe the real treasure was the technical skills we picked up along the way!*
+*Maybe the real treasure was the skills we acquired along the way!*
 
 ## Software Architecture {.smaller}
 
@@ -536,10 +536,11 @@ graph LR
 
     %% Styling using colorblind-friendly palette
     classDef mainNode fill:#FCF596,stroke:#000000,stroke-width:3px
+    classDef broardSkillNode fill:#D0E8C5,stroke:#333,stroke-width:1px
     classDef skillNode fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5
 
     class Project mainNode
-    class TechSkills,SoftSkills mainNode
+    class TechSkills,SoftSkills broardSkillNode
     class CodeQuality,ArchDesign,TechDebt,Collab,Leadership,Communication skillNode
 ```
 
