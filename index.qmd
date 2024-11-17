@@ -137,7 +137,9 @@ Information-rich, ready-made statistical visualizations
 
 ::: {.column width="40%"}
 
-:::{style="background-color: #FFDCA9; padding: 20px; margin: 20px; border-radius: 25px; text-align: center;"}
+<br>
+
+:::{style="background-color: #FFDCA9; padding: 20px; border-radius: 25px; text-align: center;"}
 
 The **grammar of graphics** framework can prepare **any** visualization! But building plots from scratch can be time-consuming.
 
@@ -162,7 +164,9 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 
 ::: {.column width="60%"}
 
-:::{style="background-color: #FDE7BB; padding: 20px; margin: 20px; border-radius: 25px; text-align: center;"}
+<br>
+
+:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
 
 💡 Using **ready-made plots** lowers the effort needed for visualizing data!
 
