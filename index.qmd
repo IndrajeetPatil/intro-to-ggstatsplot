@@ -510,17 +510,50 @@ While improving the QA tooling for `{ggstatsplot}`, I started contributing upstr
 
 ![](media/presentations.jpeg){.relative fig-align="center"}
 
+## Biography (2017-) {.smaller}
+
+:::{style="font-size: 20px;"}
+(Or how developing `{ggstatsplot}` continues to help me grow as a software developer)
+:::
+
+```{mermaid}
+%%| label: "biography"
+%%| echo: false
+graph LR
+    Project[ggstatsplot]
+
+    %% Technical Skills Branch
+    Project --> TechSkills[Technical Skills]
+    TechSkills --> CodeQuality[Code Quality]
+    TechSkills --> ArchDesign[Architecture Design]
+    TechSkills --> TechDebt[Technical Debt]
+
+    %% Soft Skills Branch
+    Project --> SoftSkills[Soft Skills]
+    SoftSkills --> Collab[Collaboration]
+    SoftSkills --> Leadership[Leadership]
+    SoftSkills --> Communication[Communication]
+
+    %% Styling using colorblind-friendly palette
+    classDef mainNode fill:#FCF596,stroke:#000000,stroke-width:3px
+    classDef skillNode fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5
+
+    class Project mainNode
+    class TechSkills,SoftSkills mainNode
+    class CodeQuality,ArchDesign,TechDebt,Collab,Leadership,Communication skillNode
+```
+
 # Conclusion 
 
 `{ggstatsplot}` provides an <span style="background-color:#D0E8C5;">accessible interface</span> to create rich statistical visualizations and helps users adopt a <span style="background-color:#FFE31A;">rigorous, reliable, and robust data exploratory and reporting workflows</span> across diverse disciplines and domains in academia and industry alike. It's an actively developed tool with <span style="background-color:#F0C1E1;">quality infrastructure</span> and <span style="background-color:#D4F6FF;">wide adoption</span>.
 
 # Thank You 😊
 
-# For more
-
+:::{style="font-size: 20px;"}
 Source code for these slides can be found [on GitHub](https://github.com/IndrajeetPatil/intro-to-ggstatsplot){target='_blank'}.
+:::
 
-<br>
+# For more
 
 If you are interested in good programming and software development practices, check out my other [slide
 decks](https://sites.google.com/site/indrajeetspatilmorality/presentations){target="_blank"}.
