@@ -97,11 +97,11 @@ and more...
 ![](media/this-is-fine.jpg){.relative fig-align="center"}
 
 - How to avoid reporting errors?
-- How to make visualizing data effortless?
-- How to emphasize the importance of the effect?
 - How to interpret null results?
+- How to increase replicability?
+- How to emphasize the importance of the effect?
 - How to easily assess validity of model assumptions?
-- How to increase reproducibility?
+- How to make data visualization effortless?
 
 :::
 
@@ -137,9 +137,7 @@ Information-rich, ready-made statistical visualizations
 
 ::: {.column width="40%"}
 
-<br>
-
-:::{style="background-color: #FFDCA9; padding: 20px; border-radius: 25px; text-align: center;"}
+:::{style="background-color: #FFDCA9; padding: 20px; margin: 20px; border-radius: 25px; text-align: center;"}
 
 The **grammar of graphics** framework can prepare **any** visualization! But building plots from scratch can be time-consuming.
 
@@ -164,9 +162,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 
 ::: {.column width="60%"}
 
-<br>
-
-:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
+:::{style="background-color: #FDE7BB; padding: 20px; margin: 20px; border-radius: 25px; text-align: center;"}
 
 💡 Using **ready-made plots** lowers the effort needed for visualizing data!
 
