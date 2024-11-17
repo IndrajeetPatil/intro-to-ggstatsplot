@@ -1,6 +1,6 @@
 ---
 #title: "Statistical Visualizations with {ggstatsplot}: A Biography"
-#author: "Indrajeet Patil"
+author: "Indrajeet Patil"
 #affiliation: 
 format:
   revealjs: 
@@ -14,12 +14,19 @@ format:
     fig-align: center
     reference-location: document
     css: styles.css
+    lang: "en-GB"
 execute:
   echo: true
   eval: true
   warning: false
   message: false
   cache: false
+keywords: ["ggstatsplot", "data visualization", "statistical reporting", "software development", "R package"]
+license: "CC0 1.0 Universal"
+pagetitle: "Statistical Visualizations with {ggstatsplot}: A Biography"
+description-meta: "A presentation on the development of {ggstatsplot} R package for statistical visualizations."
+author-meta: "Indrajeet Patil"
+date-meta: "`r Sys.time()`"
 ---
 
 ```{r}
