@@ -54,7 +54,7 @@ Indrajeet Patil<br>
 
 # Genesis
 
-Why a new package?
+Why a new software?
 
 :::{style="font-size: 20px;"}
 (Or why did a social psychologist get into software development?)
@@ -406,7 +406,7 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream: <br>
 - Pre-commit hooks (0 issues)
 - Zero user-facing warnings
 - Portability (Linux, macOS, Windows)
-- Robustness (dependencies, R versions)
+- Robustness (dependencies, language versions)
 - CRAN checks (0 notes, 0 warnings, 0 errors)
 
 :::
