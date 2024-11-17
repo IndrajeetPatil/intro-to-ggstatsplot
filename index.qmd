@@ -510,7 +510,7 @@ Second most starred `{ggplot2}`-extension!
 
 ## Communication
 
-Multiple [talks](https://sites.google.com/site/indrajeetspatilmorality/presentations){target='_blank'} on best practices in software development to help community contribute to `{ggstatsplot}` (or its dependency).
+[Training material](https://sites.google.com/site/indrajeetspatilmorality/presentations){target='_blank'} on best practices in software/package development to support community contributions.
 
 ![](media/presentations.jpeg){.relative fig-align="center"}
  
@@ -548,7 +548,7 @@ Multiple [talks](https://sites.google.com/site/indrajeetspatilmorality/presentat
 
 # Conclusion 
 
-The `{ggstatsplot}` package provides an <span style="background-color:#D0E8C5;">accessible interface</span> to create rich statistical visualizations and helps users adopt a <span style="background-color:#FFE31A;">rigorous, reliable, and robust data exploratory and reporting workflows</span> across diverse disciplines and domains in academia and industry alike. It's an actively developed tool with <span style="background-color:#F0C1E1;">quality infrastructure</span> and <span style="background-color:#D4F6FF;">wide adoption</span>.
+`{ggstatsplot}` provides an <span style="background-color:#D0E8C5;">accessible interface</span> to create rich statistical visualizations and helps users adopt a <span style="background-color:#FFE31A;">rigorous, reliable, and robust data exploratory and reporting workflows</span> across diverse disciplines and domains in academia and industry alike. It's an actively developed tool with <span style="background-color:#F0C1E1;">quality infrastructure</span> and <span style="background-color:#D4F6FF;">wide adoption</span>.
 
 # Thank You 😊
 
