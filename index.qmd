@@ -99,9 +99,9 @@ and more...
 - How to avoid reporting errors?
 - How to interpret null results?
 - How to increase replicability?
+- How to improve quality of statistical reporting?
 - How to emphasize the importance of the effect?
 - How to easily assess validity of model assumptions?
-- How to make data visualization effortless?
 
 :::
 
@@ -181,7 +181,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 `{ggstatsplot}` was born!
 
 :::{style="font-size: 20px;"}
-(published on [GitHub](https://github.com/IndrajeetPatil/ggstatsplot){target='_blank'} in 2017 and on [CRAN](https://CRAN.R-project.org/package=ggstatsplot){target='_blank'} in 2018)
+(open-sourced on [GitHub](https://github.com/IndrajeetPatil/ggstatsplot){target='_blank'} in 2017; still actively developed)
 :::
 
 ## Example function {.smaller}
@@ -201,11 +201,7 @@ ggbetweenstats(iris, Species, Sepal.Length)
 #| echo: false
 #| fig-width: 6
 #| fig-height: 5
-ggbetweenstats(
-  data = iris,
-  x    = Species,
-  y    = Sepal.Length
-)
+ggbetweenstats(iris, Species, Sepal.Length)
 ```
 
 :::
@@ -228,7 +224,7 @@ ggbetweenstats(
 **Statistical approaches available**
 
 -  parametric 
--  parametric 
+-  non-parametric 
 -  robust 
 -  Bayesian
 
@@ -326,6 +322,67 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 ✅ Follows best practices in data visualization and statistical reporting!
 
 :::
+
+# Impact
+
+*I can haz users?!*
+
+## User Love {.smaller}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::{.callout-tip collapse=false appearance='default' icon=true}
+
+## Total downloads > **500K** (97 percentile)
+
+```{r}
+#| label: "cran_downloads"
+#| fig-align: center
+#| echo: false
+#| include: false
+library(packageRank)
+p_downloads <- plot(
+  cranDownloads("ggstatsplot", from = "2018-04-03", to = Sys.Date()),
+  graphics = "ggplot2", smooth = TRUE
+) 
+```
+
+```{r}
+#| label: "cran_downloads_print"
+#| fig-align: center
+#| echo: false
+p_downloads + 
+  ggplot2::labs(subtitle = NULL) + 
+  ggplot2::theme_minimal(base_size = 24)
+```
+
+:::{style="background-color: #FFDCA9; padding: 10px; border-radius: 25px; text-align: center; font-size:20px;"}
+Second most starred `{ggplot2}`-extension!
+:::
+
+![](media/ggstats-stars.png){.relative fig-align="center"}
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+:::{.callout-tip collapse=false appearance='default' icon=true}
+
+## Total citations > **1000**
+
+![](media/ggstats-paper.png){.relative fig-align="center"}
+
+![](media/ggstats-citations.png){.relative fig-align="center"}
+
+:::
+
+:::
+
+::::
 
 # Pleasant Side Effects
 
@@ -438,67 +495,6 @@ While improving the QA tooling for `{ggstatsplot}`, I started contributing upstr
 - became co-author of `{lintr}` (linter) and `{styler}` (formatter)
 
 :::
-
-# Impact
-
-*I can haz users?!*
-
-## User Love {.smaller}
-
-:::: {.columns}
-
-::: {.column width='50%'}
-
-:::{.callout-tip collapse=false appearance='default' icon=true}
-
-## Total downloads > **500K** (97 percentile)
-
-```{r}
-#| label: "cran_downloads"
-#| fig-align: center
-#| echo: false
-#| include: false
-library(packageRank)
-p_downloads <- plot(
-  cranDownloads("ggstatsplot", from = "2018-04-03", to = Sys.Date()),
-  graphics = "ggplot2", smooth = TRUE
-) 
-```
-
-```{r}
-#| label: "cran_downloads_print"
-#| fig-align: center
-#| echo: false
-p_downloads + 
-  ggplot2::labs(subtitle = NULL) + 
-  ggplot2::theme_minimal(base_size = 24)
-```
-
-:::{style="background-color: #FFDCA9; padding: 10px; border-radius: 25px; text-align: center; font-size:20px;"}
-Second most starred `{ggplot2}`-extension!
-:::
-
-![](media/ggstats-stars.png){.relative fig-align="center"}
-
-:::
-
-:::
-
-::: {.column width='50%'}
-
-:::{.callout-tip collapse=false appearance='default' icon=true}
-
-## Total citations > **1000**
-
-![](media/ggstats-paper.png){.relative fig-align="center"}
-
-![](media/ggstats-citations.png){.relative fig-align="center"}
-
-:::
-
-:::
-
-::::
 
 ## Community Involvement {.smaller}
 
