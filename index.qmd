@@ -13,6 +13,7 @@ format:
     fig-dpi: 300
     fig-align: center
     reference-location: document
+    css: styles.css
 execute:
   echo: true
   eval: true
@@ -254,7 +255,7 @@ Does it deliver?
 
 **Without `{ggstatsplot}`**
 
-:::{style="font-size: 25px;"}
+:::{style="font-size: 23px; text-align: justify; text-justify: inter-word;"}
 
 Pearson's correlation test revealed that, across 142 participants, variable `x` was negatively correlated with variable
 `y`: $t(140)=-0.76, p=0.446$. The effect size $(r=-0.06, 95\% CI [-0.23,0.10])$ was small, as per Cohen’s (1988)
@@ -270,13 +271,13 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 **With `{ggstatsplot}`**
 
-![](media/after_ggstats.PNG)
+![](media/after_ggstats.PNG){.relative fig-align="center"}
 
 :::
 
 ::::
 
-:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
+:::{style="background-color: #FDE7BB; padding: 15px; border-radius: 25px; text-align: center;"}
 
 ✅ No need to worry about reporting or interpretation errors!
 
