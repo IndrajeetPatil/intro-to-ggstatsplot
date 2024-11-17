@@ -60,6 +60,10 @@ Indrajeet Patil<br>
 
 ::::
 
+:::aside
+Or How I Learned to Stop Worrying about Data Visualization and Statistical Reporting
+:::
+
 # Genesis
 
 Why a new software?
