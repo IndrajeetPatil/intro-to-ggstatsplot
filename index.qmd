@@ -103,13 +103,13 @@ and more...
 ## Internal Response
 
 ![](media/this-is-fine.jpg){.relative fig-align="center"}
+How to: 
 
-- How to avoid reporting errors?
-- How to interpret null results?
-- How to increase replicability?
-- How to improve quality of statistical reporting?
-- How to emphasize the importance of the effect?
-- How to easily assess validity of model assumptions?
+- avoid reporting errors?
+- improve quality of statistical reporting?
+- emphasize the importance of the effect?
+- easily assess validity of model assumptions?
+- increase replicability?
 
 :::
 
