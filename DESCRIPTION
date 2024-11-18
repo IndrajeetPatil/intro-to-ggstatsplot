@@ -23,6 +23,8 @@ Depends:
     packageRank,
     quarto,
     reticulate,
+    rstan,
+    rstantools,
     statsExpressions
 Remotes:
     IndrajeetPatil/ggstatsplot,

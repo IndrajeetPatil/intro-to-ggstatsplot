@@ -208,7 +208,7 @@ ggbetweenstats(iris, Species, Sepal.Length)
 #| label: "ggbetweenstats_1"
 #| echo: false
 #| fig-width: 6
-#| fig-height: 4
+#| fig-height: 5
 ggbetweenstats(iris, Species, Sepal.Length)
 ```
 
