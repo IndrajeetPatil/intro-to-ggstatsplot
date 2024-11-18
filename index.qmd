@@ -68,10 +68,6 @@ Or How I Learned to Stop Worrying about Data Visualization and Statistical Repor
 
 Why a new software?
 
-:::{style="font-size: 20px;"}
-(Or why did a social psychologist get into software development?)
-:::
-
 ## Life in the trenches (c. 2017, Harvard) {.smaller}
 
 :::: {.columns}
