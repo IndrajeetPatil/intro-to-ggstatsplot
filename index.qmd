@@ -448,7 +448,7 @@ flowchart LR
 
 #### 
 
-## Open-source involvement {.smaller}
+## Collaborative Solutions {.smaller}
 
 While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
@@ -489,14 +489,14 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 ::: {.column width='50%'}
 
 - co-maintainer of `{ggsignif}`
-- contributor to `{WRS2}` and `{ggcorrplot}`
+- contributor to `{WRS2}`, `{ggcorrplot}`
 
 :::
 
 ::: {.column width='50%'}
 
 - co-author of `{lintr}` (linter for R)
-- co-author of `{styler}` (tidyverse style)
+- co-author of `{styler}` (code formatter)
 
 :::
 
