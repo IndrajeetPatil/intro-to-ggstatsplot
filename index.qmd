@@ -108,6 +108,7 @@ How to:
 - avoid reporting errors?
 - improve quality of statistical reporting?
 - emphasize the importance of the effect?
+- interpret null results?
 - easily assess validity of model assumptions?
 - increase replicability?
 
