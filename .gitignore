@@ -53,5 +53,4 @@ revdep/data.sqlite
 README.html
 
 index_cache/
-index_files/
 index.rmarkdown
