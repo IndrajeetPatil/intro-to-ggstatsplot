@@ -208,6 +208,8 @@ ggbetweenstats(iris, Species, Sepal.Length)
 ```{r}
 #| label: "ggbetweenstats_1"
 #| echo: false
+#| eval: true
+#| include: true
 #| fig-width: 6
 #| fig-height: 5
 ggbetweenstats(iris, Species, Sepal.Length)
@@ -350,6 +352,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 #| label: "cran_downloads"
 #| fig-align: center
 #| echo: false
+#| eval: true
 #| include: false
 library(packageRank)
 p_downloads <- plot(
@@ -362,6 +365,8 @@ p_downloads <- plot(
 #| label: "cran_downloads_print"
 #| fig-align: center
 #| echo: false
+#| eval: true
+#| include: true
 p_downloads + 
   ggplot2::labs(subtitle = NULL) + 
   ggplot2::theme_minimal(base_size = 24)
