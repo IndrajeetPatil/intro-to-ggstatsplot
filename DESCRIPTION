@@ -16,6 +16,7 @@ BugReports: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/issues
 Depends:
     bayestestR,
     datasauRus,
+    downlit,
     ggiraphExtra,
     ggstatsplot,
     ggthemes,
@@ -25,7 +26,8 @@ Depends:
     reticulate,
     rstan,
     rstantools,
-    statsExpressions
+    statsExpressions,
+    xml2
 Remotes:
     IndrajeetPatil/ggstatsplot,
     IndrajeetPatil/statsExpressions
