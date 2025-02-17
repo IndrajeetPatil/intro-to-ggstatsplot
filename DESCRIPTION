@@ -28,9 +28,6 @@ Depends:
     rstantools,
     statsExpressions,
     xml2
-Remotes:
-    IndrajeetPatil/ggstatsplot,
-    IndrajeetPatil/statsExpressions
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
