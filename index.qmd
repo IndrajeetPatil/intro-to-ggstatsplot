@@ -1,15 +1,12 @@
 ---
-#title: "Statistical Visualizations with {ggstatsplot}: A Biography"
 author: "Indrajeet Patil"
-#affiliation: 
 format:
   revealjs: 
     theme: simple
     slide-number: c
-    embed-resources: true
+    #embed-resources: true
     preview-links: auto
     code-link: true
-    #footer: "Source code for these slides can be found [on GitHub](https://github.com/IndrajeetPatil/intro-to-ggstatsplot){target='_blank'}."
     fig-dpi: 300
     fig-align: center
     reference-location: document
