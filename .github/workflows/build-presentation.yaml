@@ -37,14 +37,12 @@ jobs:
         with:
           pak-version: devel
           upgrade: 'TRUE'
-          extra-packages: |
-            quarto-dev/quarto-r
-            r-lib/sessioninfo
 
       - name: Render slides
         run: |
           options(crayon.enabled = FALSE)
-          quarto::quarto_render("index.qmd")
+          quarto::quarto_render("index.qmd", output_format = "revealjs")
+          rmarkdown::render("README.Rmd")
         shell: Rscript {0}
 
       - name: Build PDF using decktape
