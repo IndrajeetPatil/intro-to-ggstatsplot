@@ -42,7 +42,6 @@ jobs:
         run: |
           options(crayon.enabled = FALSE)
           quarto::quarto_render("index.qmd", output_format = "revealjs")
-          rmarkdown::render("README.Rmd")
         shell: Rscript {0}
 
       - name: Build PDF using decktape
