@@ -6,13 +6,13 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-da03d714c310c60cec1d83284c92da2c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-6bb072e51ab976e338d8fd19b221fbe5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="index_files/libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.17">
+<meta name="generator" content="quarto-1.7.20">
 <meta name="author" content="Indrajeet Patil">
-<meta name="dcterms.date" content="2025-03-23 00:33:03.702148">
+<meta name="dcterms.date" content="2025-03-30 00:34:40.8789">
 <meta name="keywords" content="ggstatsplot, data visualization, statistical reporting, software development, R package">
 <title>Statistical Visualizations with {ggstatsplot}: A Biography</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,8 +33,9 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -45,7 +46,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -704,9 +705,9 @@
  collate  C.UTF-8
  ctype    C.UTF-8
  tz       UTC
- date     2025-03-23
+ date     2025-03-30
  pandoc   3.6.4 @ /opt/hostedtoolcache/pandoc/3.6.4/x64/ (via rmarkdown)
- quarto   1.7.17 @ /usr/local/bin/quarto
+ quarto   1.7.20 @ /usr/local/bin/quarto
 
 ─ Packages ───────────────────────────────────────────────────────────────────
  package          * version     date (UTC) lib source
@@ -722,10 +723,10 @@
  compiler           4.4.3       2025-02-28 [3] local
  correlation        0.8.7       2025-03-03 [1] RSPM
  cranlogs           2.1.1       2019-04-29 [1] RSPM
- curl               6.2.1       2025-02-19 [1] RSPM
+ curl               6.2.2       2025-03-24 [1] RSPM
  data.table         1.17.0      2025-02-22 [1] RSPM
  datasets         * 4.4.3       2025-02-28 [3] local
- datawizard         1.0.1       2025-03-07 [1] RSPM
+ datawizard         1.0.2       2025-03-24 [1] RSPM
  digest             0.6.37      2024-08-19 [1] RSPM
  dplyr              1.1.4       2023-11-17 [1] RSPM
  effectsize         1.0.0       2024-12-10 [1] RSPM
@@ -746,7 +747,7 @@
  htmltools          0.5.8.1     2024-04-04 [1] RSPM
  httr               1.4.7       2023-08-15 [1] RSPM
  insight            1.1.0       2025-03-01 [1] RSPM
- jsonlite           1.9.1       2025-03-03 [1] RSPM
+ jsonlite           2.0.0       2025-03-27 [1] RSPM
  knitr              1.50        2025-03-16 [1] RSPM
  kSamples           1.2-10      2023-10-07 [1] RSPM
  labeling           0.4.3       2023-08-29 [1] RSPM
@@ -756,7 +757,7 @@
  magrittr           2.0.3       2022-03-30 [1] RSPM
  MASS               7.3-65      2025-02-28 [1] RSPM
  Matrix             1.7-3       2025-03-11 [1] RSPM
- MatrixModels       0.5-3       2023-11-06 [1] RSPM
+ MatrixModels       0.5-4       2025-03-26 [1] RSPM
  memoise            2.0.1       2021-11-26 [1] RSPM
  methods          * 4.4.3       2025-02-28 [3] local
  mgcv               1.9-1       2023-12-21 [3] CRAN (R 4.4.3)
@@ -783,7 +784,7 @@
  R6                 2.6.1       2025-02-15 [1] RSPM
  Rcpp               1.0.14      2025-01-12 [1] RSPM
  RcppParallel       5.1.10      2025-01-24 [1] RSPM
- RCurl              1.98-1.17   2025-03-22 [1] CRAN (R 4.4.3)
+ RCurl              1.98-1.17   2025-03-22 [1] RSPM
  rematch2           2.1.2       2020-05-01 [1] RSPM
  rlang              1.1.5       2025-01-17 [1] RSPM
  rmarkdown          2.29        2024-11-04 [1] RSPM
@@ -794,10 +795,10 @@
  splines            4.4.3       2025-02-28 [3] local
  stats            * 4.4.3       2025-02-28 [3] local
  statsExpressions   1.6.2.9000  2025-03-16 [1] Github (IndrajeetPatil/statsExpressions@e6fc6e1)
- stringi            1.8.4       2024-05-06 [1] RSPM
+ stringi            1.8.7       2025-03-27 [1] RSPM
  stringr            1.5.1       2023-11-14 [1] RSPM
  sugrrants          0.2.9       2024-03-12 [1] RSPM
- SuppDists          1.1-9.8     2024-09-03 [1] RSPM
+ SuppDists          1.1-9.9     2025-03-24 [1] RSPM
  tibble             3.2.1       2023-03-20 [1] RSPM
  tidyr              1.3.1       2024-01-24 [1] RSPM
  tidyselect         1.2.1       2024-03-11 [1] RSPM
