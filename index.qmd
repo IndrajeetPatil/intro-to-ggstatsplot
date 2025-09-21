@@ -6,6 +6,7 @@ format:
     slide-number: c
     #embed-resources: true
     preview-links: auto
+    link-external-newwindow: true
     code-link: true
     fig-dpi: 300
     fig-align: center
@@ -315,8 +316,8 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 ![](media/stats_reporting_format.png){.relative fig-align="center"}
 
 :::{style="font-size: 15px; text-align: center;"}
-([Doorn et al., 2020]([https://link.springer.com/article/10.3758/s13423-020-01798-5]){target="_blank"}; 
-[APA Manual](https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf){target="_blank"})
+([Doorn et al., 2020]([https://link.springer.com/article/10.3758/s13423-020-01798-5]); 
+[APA Manual](https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf))
 :::
 
 :::
@@ -602,19 +603,17 @@ Source code for these slides can be found [on GitHub](https://github.com/Indraje
 # For more
 
 If you are interested in good programming and software development practices, check out my other [slide
-decks](https://sites.google.com/site/indrajeetspatilmorality/presentations){target="_blank"}.
+decks](https://sites.google.com/site/indrajeetspatilmorality/presentations).
 
 # Find me at...
 
-{{< fa brands twitter >}} [Twitter](http://twitter.com/patilindrajeets){target="_blank"}
+{{< fa brands linkedin >}} [LikedIn](https://www.linkedin.com/in/indrajeet-patil-397865174/)
 
-{{< fa brands linkedin >}} [LikedIn](https://www.linkedin.com/in/indrajeet-patil-397865174/){target="_blank"}
+{{< fa brands github >}} [GitHub](http://github.com/IndrajeetPatil)
 
-{{< fa brands github >}} [GitHub](http://github.com/IndrajeetPatil){target="_blank"}
+{{< fa solid link >}} [Website](https://sites.google.com/site/indrajeetspatilmorality/)
 
-{{< fa solid link >}} [Website](https://sites.google.com/site/indrajeetspatilmorality/){target="_blank"}
-
-{{< fa solid envelope >}} [E-mail](mailto:patilindrajeet.science@gmail.com){target="_blank"}
+{{< fa solid envelope >}} [E-mail](mailto:patilindrajeet.science@gmail.com)
 
 ## Session information {.smaller}
 
