@@ -12,7 +12,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.0">
 <meta name="author" content="Indrajeet Patil">
-<meta name="dcterms.date" content="2025-09-21 00:36:50.022575">
+<meta name="dcterms.date" content="2025-09-21 06:11:57.448845">
 <meta name="keywords" content="ggstatsplot, data visualization, statistical reporting, software development, R package">
 <title>Statistical Visualizations with {ggstatsplot}: A Biography</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -423,7 +423,7 @@
 </figure>
 </div>
 <div style="font-size: 15px; text-align: center;">
-<p>(<a href="%5Bhttps://link.springer.com/article/10.3758/s13423-020-01798-5%5D" target="_blank">Doorn et al., 2020</a>; <a href="https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf" target="_blank">APA Manual</a>)</p>
+<p>(<a href="%5Bhttps://link.springer.com/article/10.3758/s13423-020-01798-5%5D">Doorn et al., 2020</a>; <a href="https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf">APA Manual</a>)</p>
 </div>
 </div>
 </div>
@@ -684,13 +684,12 @@
 <p>Source code for these slides can be found <a href="https://github.com/IndrajeetPatil/intro-to-ggstatsplot" target="_blank">on GitHub</a>.</p>
 </div>
 </section><section id="for-more" class="title-slide slide level1 center"><h1>For more</h1>
-<p>If you are interested in good programming and software development practices, check out my other <a href="https://sites.google.com/site/indrajeetspatilmorality/presentations" target="_blank">slide decks</a>.</p>
+<p>If you are interested in good programming and software development practices, check out my other <a href="https://sites.google.com/site/indrajeetspatilmorality/presentations">slide decks</a>.</p>
 </section><section><section id="find-me-at" class="title-slide slide level1 center"><h1>Find me at…</h1>
-<p><i class="fa-brands fa-twitter" aria-label="twitter"></i> <a href="http://twitter.com/patilindrajeets" target="_blank">Twitter</a></p>
-<p><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> <a href="https://www.linkedin.com/in/indrajeet-patil-397865174/" target="_blank">LikedIn</a></p>
-<p><i class="fa-brands fa-github" aria-label="github"></i> <a href="http://github.com/IndrajeetPatil" target="_blank">GitHub</a></p>
-<p><i class="fa-solid fa-link" aria-label="link"></i> <a href="https://sites.google.com/site/indrajeetspatilmorality/" target="_blank">Website</a></p>
-<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:patilindrajeet.science@gmail.com" target="_blank">E-mail</a></p>
+<p><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> <a href="https://www.linkedin.com/in/indrajeet-patil-397865174/">LikedIn</a></p>
+<p><i class="fa-brands fa-github" aria-label="github"></i> <a href="http://github.com/IndrajeetPatil">GitHub</a></p>
+<p><i class="fa-solid fa-link" aria-label="link"></i> <a href="https://sites.google.com/site/indrajeetspatilmorality/">Website</a></p>
+<p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:patilindrajeet.science@gmail.com">E-mail</a></p>
 </section><section id="session-information" class="slide level2 smaller"><h2>Session information</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>(<span class="at">include_base =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1925,6 +1924,11 @@
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
             }
           }
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
