@@ -1,18 +1,18 @@
 # Statistical Visualizations with {ggstatsplot}: A Biography
 
-This is a repository for presentation about the [`{ggstatsplot}`](https://indrajeetpatil.github.io/ggstatsplot/) (prepared using [Quarto](https://quarto.org/)).
+<img src="media/logo.png" align="right" width="240" alt="ggstatsplot logo" />
 
-The slides are available here:<br>
-<https://indrajeetpatil.github.io/intro-to-ggstatsplot/#/ggstatsplot-informative-statistical-visualizations>
+This is a repository for presentation about the `{ggstatsplot}`.
 
-There is also a dedicated website for this package:<br>
-<https://indrajeetpatil.github.io/ggstatsplot/>
+## Links
+
+- 📊 [Presentation slides](https://indrajeetpatil.github.io/intro-to-ggstatsplot/)
+- 🌐 [Package website](https://indrajeetpatil.github.io/ggstatsplot/)
 
 ## Setup
 
-You will need to install the following package-
+The package can be installed from CRAN:
 
 ```r
 install.packages("ggstatsplot")
 ```
-
