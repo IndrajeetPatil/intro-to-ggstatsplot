@@ -1,0 +1,1407 @@
+---
+author: "Indrajeet Patil"
+format:
+  revealjs: 
+    theme: simple
+    slide-number: c
+    preview-links: auto
+    link-external-newwindow: true
+    code-link: true
+    fig-dpi: 300
+    fig-align: center
+    reference-location: document
+    css: styles.css
+    lang: "en-GB"
+execute:
+  echo: true
+  eval: true
+  warning: false
+  message: false
+  cache: false
+keywords: ["ggstatsplot", "data visualization", "statistical reporting", "software development", "R package"]
+license: "CC0 1.0 Universal"
+pagetitle: "Statistical Visualizations with {ggstatsplot}: A Biography"
+description-meta: "A presentation on the development of {ggstatsplot} R package for statistical visualizations."
+author-meta: "Indrajeet Patil"
+date-meta: "`r Sys.time()`"
+---
+
+```{r}
+#| include: false
+#| echo: false
+#| label: "setup"
+library(ggstatsplot)
+library(ggplot2)
+set.seed(123)
+```
+
+## Statistical Visualizations with {ggstatsplot}: A Biography {style="margin-top: 1em;"}
+
+<!-- Need to install extension from https://github.com/quarto-ext/fontawesome -->
+
+<!-- Run `quarto install extension quarto-ext/fontawesome` in terminal -->
+
+:::: {.columns}
+
+::: {.column width='40%'}
+
+::: {style="margin-top: 0.5em; margin-bottom: 0.5em; font-size: 1em"}
+Indrajeet Patil<br>
+:::
+
+:::
+
+::: {.column width='60%'}
+![](media/logo.png){.relative fig-align="center" width="350" height="350"}
+:::
+
+::::
+
+:::aside
+Or How I Learned to Stop Worrying about Data Visualization and Statistical Reporting
+:::
+
+# Genesis
+
+Why a new software?
+
+## Life in the trenches (c. 2017, Harvard) {.smaller}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::{.callout-caution collapse=false appearance='default' icon=true}
+
+## External Stimulus
+
+- **Reporting errors**: 
+
+> "half of all published psychology papers contained at least one *p*-value that was inconsistent"^[[(Nuijten et al., *Behavior Research Methods*, 2016)](https://link.springer.com/article/10.3758/s13428-015-0664-2)]
+
+- **Interpretation errors**: 
+
+> "in 72% of cases, nonsignificant results were misinterpreted [to mean] that effect was absent"^[[(Aczel et al., *AMPPS*, 2018)](https://journals.sagepub.com/doi/pdf/10.1177/2515245918773742)]
+
+- **Replication crisis**: 
+
+> "39% of effects were subjectively rated to have replicated the original result"^[[Open Science Collaboration, *Science*, 2015](https://www.science.org/doi/10.1126/science.aac4716)]
+
+and more...
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+:::{.callout-warning collapse=false appearance='default' icon=true}
+
+## Internal Response
+
+![](media/this-is-fine.jpg){.relative fig-align="center"}
+How to: 
+
+- avoid reporting errors?
+- improve quality of statistical reporting?
+- emphasize the importance of the effect?
+- interpret null results?
+- easily assess validity of model assumptions?
+- increase replicability?
+
+:::
+
+:::
+
+::::
+
+# Proposal
+
+Information-rich, ready-made statistical visualizations
+
+:::{style="font-size: 20px;"}
+(minimal effort and maximum transparency)
+:::
+
+## A visualization with statistical summary {.smaller}
+
+![](media/datasaurus.gif)
+
+:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
+
+💡 **Visualizations** reveal problems not discernible from **model summaries**!
+
+:::
+
+:::footer
+[(Matejka & Fitzmaurice, *Autodesk Research*,2017)](https://www.autodeskresearch.com/publications/samestats)
+:::
+
+## Ready-made plots with one-line syntax {.smaller}
+
+::::: columns
+
+::: {.column width="40%"}
+
+<br>
+
+:::{style="background-color: #FFDCA9; padding: 20px; border-radius: 25px; text-align: center;"}
+
+The **grammar of graphics** framework can prepare **any** visualization! But building plots from scratch can be time-consuming.
+
+:::
+
+:::
+
+::: {.column width="60%"}
+
+![](media/ggbooks.jpeg){.relative fig-align="center" width="500" height="300"}
+:::
+
+:::::
+
+::::: columns
+
+::: {.column width="40%"}
+
+![](media/cat_trademill.gif){.relative fig-align="center" width="350" height="350}
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+
+:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
+
+💡 Using **ready-made plots** lowers the effort needed for visualizing data!
+
+:::
+
+:::
+
+:::::
+
+# Action Plan
+
+`{ggstatsplot}` was born!
+
+:::{style="font-size: 20px;"}
+(open-sourced on [GitHub](https://github.com/IndrajeetPatil/ggstatsplot) in 2017; still actively developed)
+:::
+
+## Example function {.smaller}
+
+E.g., for hypothesis about differences *between* groups
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{.r}
+ggbetweenstats(iris, Species, Sepal.Length)
+```
+
+```{r}
+#| label: "ggbetweenstats_1"
+#| echo: false
+#| eval: true
+#| include: true
+#| fig-width: 6
+#| fig-height: 5
+ggbetweenstats(iris, Species, Sepal.Length)
+```
+
+:::
+
+::: {.column width='35%'}
+
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+**Information-rich defaults**
+
+-  raw data + distributions 
+-  descriptive statistics
+-  inferential statistics
+-  effect size + uncertainty
+-  pairwise comparisons
+-  Bayesian hypothesis-testing 
+-  Bayesian estimation
+
+**Statistical approaches available**
+
+-  parametric 
+-  non-parametric 
+-  robust 
+-  Bayesian
+
+:::
+
+:::
+
+::::
+
+## And there is more! {.smaller}
+
+![](media/collage.jpeg)
+
+:::footer
+[Appendix](https://indrajeetpatil.github.io/intro-to-ggstatsplot/#/examples-of-other-functions) provides more details.
+:::
+
+# Promised Land
+
+Does it deliver?
+
+## Show, don't tell {.smaller}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+**Without `{ggstatsplot}`**
+
+:::{style="font-size: 23px; text-align: justify; text-justify: inter-word;"}
+
+Pearson's correlation test revealed that, across 142 participants, variable `x` was negatively correlated with variable
+`y`: $t(140)=-0.76, p=0.446$. The effect size $(r=-0.06, 95\% CI [-0.23,0.10])$ was small, as per Cohen’s (1988)
+conventions. The Bayes Factor for the same analysis revealed that the data were `r round(exp(1.76), 2)` times more
+probable under the null hypothesis as compared to the alternative hypothesis. This can be considered moderate evidence
+(Jeffreys, 1961) in favor of the null hypothesis (absence of any correlation between `x` and `y`).
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+**With `{ggstatsplot}`**
+
+![](media/after_ggstats.PNG){.relative fig-align="center"}
+
+:::
+
+::::
+
+:::{style="background-color: #FDE7BB; padding: 15px; border-radius: 25px; text-align: center;"}
+
+✅ No need to worry about reporting or interpretation errors!
+
+:::
+
+## Thoughtful Defaults {.smaller}
+
+:::: {.columns}
+
+::: {.column width='40%'}
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+
+## Data Visualization
+
+![](media/dataviz.jpeg){.relative fig-align="center" height="400"}
+
+:::
+
+:::
+
+::: {.column width='60%'}
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+
+## Statistical Reporting
+
+![](media/stats_reporting_format.png){.relative fig-align="center"}
+
+:::{style="font-size: 15px; text-align: center;"}
+([Doorn et al., 2020]([https://link.springer.com/article/10.3758/s13423-020-01798-5]); 
+[APA Manual](https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf))
+:::
+
+:::
+
+:::
+
+::::
+
+:::{style="background-color: #FDE7BB; padding: 15px; border-radius: 25px; text-align: center;"}
+
+✅ Follows best practices in data visualization and statistical reporting!
+
+:::
+
+# Impact
+
+*I can haz users?!*
+
+## User Love {.smaller}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::{.callout-tip collapse=false appearance='default' icon=true}
+
+## Total downloads > **500K** (97 percentile)
+
+```{r}
+#| label: "cran_downloads"
+#| fig-align: center
+#| echo: false
+#| eval: true
+#| include: false
+library(packageRank)
+p_downloads <- plot(
+  cranDownloads("ggstatsplot", from = "2018-04-03", to = Sys.Date()),
+  graphics = "ggplot2", smooth = TRUE
+) 
+```
+
+```{r}
+#| label: "cran_downloads_print"
+#| fig-align: center
+#| echo: false
+#| eval: true
+#| include: true
+p_downloads + 
+  ggplot2::labs(subtitle = NULL) + 
+  ggplot2::theme_minimal(base_size = 24)
+```
+
+:::{style="background-color: #FFDCA9; padding: 10px; border-radius: 25px; text-align: center; font-size:20px;"}
+Second most starred `{ggplot2}`-extension!
+:::
+
+![](media/ggstats-stars.png){.relative fig-align="center"}
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+:::{.callout-tip collapse=false appearance='default' icon=true}
+
+## Total citations > **1000**
+
+From publications across a wide range of fields: <br>
+biology, medicine, psychology, economics, etc.
+
+![](media/ggstats-paper.png){.relative fig-align="center"}
+
+:::{style="background-color: #FFDCA9; padding: 10px; border-radius: 25px; text-align: center; font-size:20px;"}
+**[Improving Psychological Science Award](https://improvingpsych.org/mission/awards/)** (2020)
+:::
+
+<br>
+
+:::
+
+:::
+
+::::
+
+# Pleasant Side Effects
+
+*Maybe the real treasure was the skills we acquired along the way!*
+
+## Software Architecture {.smaller}
+
+Breaking down the monolith: $20K_{(2017)} \rightarrow 1K_{(2024)}$ lines of code
+
+```{mermaid}
+%%| echo: false
+flowchart LR
+    ggstatsplot[ggstatsplot]
+    statsExpressions[statsExpressions]
+    note["backend engine"]
+    
+    subgraph easystats[easystats]
+        effectsize[effectsize]
+        insight[insight]
+        parameters[parameters]
+        performance[performance]
+        bayestestR[bayestestR]
+    end
+    
+    %% Main dependencies
+    ggstatsplot --> statsExpressions
+    ggstatsplot --> dots[Other dependencies]
+    
+    %% Add note connecting to the main relationship
+    note -.-> statsExpressions
+    
+    %% statsExpressions dependencies on easystats packages
+    statsExpressions --> effectsize
+    statsExpressions --> insight
+    statsExpressions --> parameters
+    statsExpressions --> performance
+    statsExpressions --> bayestestR
+    
+    %% Styling using custom colors
+    style easystats fill:#EED3B1
+    
+    classDef main fill:#FCF596,stroke:#333,stroke-width:3px
+    classDef note fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5
+    
+    class ggstatsplot main
+    class note note
+```
+
+#### 
+
+## Collaborative Solutions {.smaller}
+
+While re-architecting `{ggstatsplot}`, I started contributing upstream.
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+
+## As part of `{easystats}` core team
+
+- leadership skills to steer the project
+- long-term vision for the project
+- API design
+- CI infrastructure
+- code review
+- documentation
+- scouting for new talent
+- developer advocacy
+- community engagement
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+![](media/easystats_logo_wall.png){.relative fig-align="center"}
+
+:::
+
+::::
+
+#### Making it a habit
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+- co-maintainer of `{ggsignif}`
+- contributor to `{WRS2}`, `{ggcorrplot}`
+
+:::
+
+::: {.column width='50%'}
+
+- co-author of `{lintr}` (linter for R)
+- co-author of `{styler}` (code formatter)
+
+:::
+
+::::
+
+## Quality Assurance {.smaller}
+
+> "_The only way to go fast, is to go well._"<br>
+>                             \- Robert C. Martin
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+
+## CI Checks (GitHub Actions)
+
+- Unit tests (random-order)
+- Code coverage (100%)
+- Linting (0 lints)
+- Formatting (0 issues)
+- Documentation (website, no link rot, plenty examples)
+- Pre-commit hooks (0 issues)
+- Zero user-facing warnings
+- Portability (Linux, macOS, Windows)
+- Robustness (dependencies, language versions)
+- CRAN checks (0 notes, 0 warnings, 0 errors)
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+:::{.callout-important collapse=false appearance='default' icon=true}
+
+## Healthy and active code base
+
+![](media/ggstats-contributions.png){.relative fig-align="center"}
+
+![](media/pr-qa.png){.relative fig-align="center"}
+
+:::
+
+:::
+
+::::
+
+## Communication {.smaller}
+
+[Training material](https://sites.google.com/site/indrajeetspatilmorality/presentations) on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
+
+![](media/presentations.jpeg){.relative fig-align="center"}
+
+## Biography (2017-) {.smaller}
+
+:::{style="font-size: 20px;"}
+(Or how developing `{ggstatsplot}` continues to help me grow as a software developer)
+:::
+
+```{mermaid}
+%%| label: "biography"
+%%| echo: false
+graph LR
+    Project[ggstatsplot]
+
+    %% Technical Skills Branch
+    Project --> TechSkills[Technical Skills]
+    TechSkills --> CodeQuality[Code Quality]
+    TechSkills --> ArchDesign[Architecture Design]
+    TechSkills --> TechDebt[Technical Debt]
+
+    %% Soft Skills Branch
+    Project --> SoftSkills[Soft Skills]
+    SoftSkills --> Collab[Collaboration]
+    SoftSkills --> Leadership[Leadership]
+    SoftSkills --> Communication[Communication]
+
+    %% Styling using colorblind-friendly palette
+    classDef mainNode fill:#FCF596,stroke:#000000,stroke-width:3px
+    classDef broardSkillNode fill:#D0E8C5,stroke:#333,stroke-width:1px
+    classDef skillNode fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5
+
+    class Project mainNode
+    class TechSkills,SoftSkills broardSkillNode
+    class CodeQuality,ArchDesign,TechDebt,Collab,Leadership,Communication skillNode
+```
+
+# Conclusion
+
+`{ggstatsplot}` offers an <span style="background-color:#D0E8C5;">intuitive interface</span> for creating detailed statistical visualizations, enabling users to adopt <span style="background-color:#FFE31A;">rigorous, reliable, and robust workflows for data exploration and reporting</span> across various academic and industrial disciplines. It is a well-maintained tool with <span style="background-color:#F0C1E1;">high-quality infrastructure</span> and <span style="background-color:#D4F6FF;">widespread adoption</span>.
+
+# Thank You 😊
+
+:::{style="font-size: 20px;"}
+Source code for these slides can be found [on GitHub](https://github.com/IndrajeetPatil/intro-to-ggstatsplot).
+:::
+
+# For more
+
+If you are interested in good programming and software development practices, check out my other [slide
+decks](https://sites.google.com/site/indrajeetspatilmorality/presentations).
+
+# Find me at...
+
+{{< fa brands linkedin >}} [LikedIn](https://www.linkedin.com/in/indrajeet-patil-397865174/)
+
+{{< fa brands github >}} [GitHub](http://github.com/IndrajeetPatil)
+
+{{< fa solid link >}} [Website](https://sites.google.com/site/indrajeetspatilmorality/)
+
+{{< fa solid envelope >}} [E-mail](mailto:patilindrajeet.science@gmail.com)
+
+## Session information {.smaller}
+
+```{r}
+sessioninfo::session_info(include_base = TRUE)
+```
+
+# Appendix
+
+# Examples of other functions
+
+## `ggwithinstats()` {.smaller}
+
+Hypothesis about group differences: repeated measures design
+
+:::: {.columns}
+
+::: {.column width='65%'}
+```{r}
+#| label: "ggwithinstats_1"
+ggwithinstats(
+  data = WRS2::WineTasting,
+  x = Wine,
+  y = Taste
+)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  raw data + distributions 
+-  descriptive statistics
+-  inferential statistics
+-  effect size + uncertainty
+-  pairwise comparisons
+-  Bayesian hypothesis-testing 
+-  Bayesian estimation
+
+**Statistical approaches available**
+
+-  parametric 
+-  parametric 
+-  robust 
+-  Bayesian
+
+:::
+
+:::
+
+::::
+
+## `gghistostats()` {.smaller}
+
+Distribution of a numeric variable
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{r}
+#| label: "gghistostats_1"
+gghistostats(
+  data = movies_long,
+  x = budget,
+  test.value = 30 
+)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  counts + proportion for bins
+-  descriptive statistics
+-  inferential statistics
+-  effect size + uncertainty
+-  pairwise comparisons
+-  Bayesian hypothesis-testing 
+-  Bayesian estimation
+
+**Statistical approaches available**
+
+-  parametric 
+-  parametric 
+-  robust 
+-  Bayesian
+
+:::
+
+:::
+
+::::
+
+## `ggdotplotstats()` {.smaller}
+
+Labeled numeric variable
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{r}
+#| label: "ggdotplotstats_1"
+ggdotplotstats(
+  data = movies_long,
+  x = budget,
+  y = genre,
+  test.value = 30 
+)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  descriptive statistics
+-  inferential statistics
+-  effect size + uncertainty
+-  pairwise comparisons
+-  Bayesian hypothesis-testing 
+-  Bayesian estimation
+
+**Statistical approaches available**
+
+-  parametric 
+-  parametric 
+-  robust 
+-  Bayesian
+
+:::
+
+:::
+
+::::
+
+## `ggscatterstats()` {.smaller}
+
+Hypothesis about correlation: Two numeric variables
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{r}
+#| label: "ggscatterstats_1"
+ggscatterstats(
+  data = movies_long,
+  x = budget,
+  y = rating
+)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  joint distribution
+-  marginal distribution
+-  effect size + uncertainty
+-  pairwise comparisons
+-  Bayesian hypothesis-testing 
+-  Bayesian estimation
+
+**Statistical approaches available**
+
+-  parametric 
+-  parametric 
+-  robust 
+-  Bayesian
+
+:::
+
+:::
+
+::::
+
+## `ggcorrmat()` {.smaller}
+
+Hypothesis about correlation: Multiple numeric variables
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{r}
+#| label: "ggcorrmat_1"
+ggcorrmat(dplyr::starwars)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  inferential statistics
+-  effect size + uncertainty
+-  careful handling of `NA`s
+-  partial correlations
+
+**Statistical approaches available**
+
+-  parametric 
+-  parametric 
+-  robust 
+-  Bayesian
+
+:::
+
+:::
+
+::::
+
+
+## `ggpiestats()` {.smaller}
+
+Hypothesis about composition of categorical variables
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{r}
+#| label: "ggpiestats_1"
+ggpiestats(
+  data = mtcars,
+  x = am,
+  y = cyl
+)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  descriptive statistics
+-  inferential statistics
+-  effect size + uncertainty
+-  goodness-of-fit tests
+-  Bayesian hypothesis-testing 
+-  Bayesian estimation
+
+:::
+
+:::
+
+::::
+
+## `ggbarstats()` {.smaller}
+
+Hypothesis about composition of categorical variables
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{r}
+#| label: "ggbarstats_1"
+ggbarstats(
+  data = mtcars,
+  x = am,
+  y = cyl
+)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  descriptive statistics
+-  inferential statistics
+-  effect size + uncertainty
+-  goodness-of-fit tests
+-  Bayesian hypothesis-testing 
+-  Bayesian estimation
+
+:::
+
+:::
+
+::::
+
+## `ggcoefstats()` {.smaller}
+
+Hypothesis about regression coefficients
+
+:::: {.columns}
+
+::: {.column width='65%'}
+
+```{r}
+#| label: "ggcoefstats_1"
+mod <- lm(
+  formula = rating ~ mpaa,
+  data = movies_long
+)
+
+ggcoefstats(mod)
+```
+:::
+
+::: {.column width='35%'}
+:::{.callout-important collapse=false appearance='default' icon=true}
+## 
+
+✏️ **Defaults**
+
+-  estimate + uncertainty
+-  inferential statistics ($t$, $z$, $F$, $\chi^2$)
+-  model fit indices (AIC + BIC)
+
+Supports all regression models supported in [`{easystats}`](https://easystats.github.io/insight/reference/is_model_supported.html) ecosystem.
+
+Meta-analysis is also supported!
+
+:::
+
+:::
+
+::::
+
+
+# *grouped\_* variants
+
+Iterating over a grouping variable
+
+## *grouped\_* functions {.smaller}
+
+:::: {.columns}
+
+::: {.column width='60%'}
+```{r grouped_1}
+grouped_ggpiestats(
+  data = mtcars,
+  x = cyl,
+  grouping.var = am 
+)
+```
+:::
+
+::: {.column width='40%'}
+
+:::{.callout-tip collapse=false appearance='default' icon=true}
+
+## Available `grouped_` variants:
+
+- `grouped_ggbetweenstats()` 
+- `grouped_ggwithinstats()` 
+- `grouped_gghistostats()` 
+- `grouped_ggdotplotstats()` 
+- `grouped_ggscatterstats()` 
+- `grouped_ggcorrmat()` 
+- `grouped_ggpiestats()` 
+- `grouped_ggbarstats()`
+
+:::
+
+:::
+
+::::
+
+
+# Customizability
+
+"What if I don't like the default plots?" 🤔
+
+## Modify the look 🎨 {.smaller}
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+By changing **theme** and **palette**
+
+```{.r code-line-numbers="5-7"}
+ggbetweenstats(
+  data = movies_long,
+  x = mpaa,
+  y = rating,
+  ggtheme = ggthemes::theme_economist(), 
+  palette = "Darjeeling2", 
+  package = "wesanderson" 
+)
+```
+
+:::
+
+::: {.column width='50%'}
+
+```{r}
+#| label: "ggbetweenstats_4"
+#| echo: false
+ggbetweenstats(
+  data = movies_long,
+  x = mpaa,
+  y = rating,
+  ggtheme = ggthemes::theme_economist(), 
+  palette = "Darjeeling2", 
+  package = "wesanderson" 
+)
+```
+
+:::
+
+::::
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+By using `{ggplot2}` functions
+
+```{.r code-line-numbers="7"}
+ggbetweenstats(
+  data = mtcars,
+  x = am,
+  y = wt,
+  type = "bayes"
+) +
+  scale_y_continuous(sec.axis = dup_axis()) 
+```
+
+:::
+
+::: {.column width='50%'}
+
+```{r}
+#| label: "ggbetweenstats_5"
+#| echo: false
+ggbetweenstats(
+  data = mtcars,
+  x = am,
+  y = wt,
+  type = "bayes"
+) +
+  scale_y_continuous(sec.axis = dup_axis())
+```
+
+:::
+
+::::
+
+
+
+## Too much information 🙈 {.smaller}
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width='40%'}
+
+Get **only plots**:
+
+```{.r code-line-numbers="5-10"}
+ggbetweenstats(
+  data = iris,
+  x = Species,
+  y = Sepal.Length,
+  # turn off statistical analysis
+  centrality.plotting = FALSE, 
+  results.subtitle = FALSE, 
+  bf.message = FALSE, 
+  # turn off pairwise comparisons
+  pairwise.display = "none" 
+)
+```
+
+:::
+
+::: {.column width='60%'}
+
+```{r}
+#| label: "ggbetweenstats_only_plot"
+#| echo: false
+ggbetweenstats(
+  data = iris,
+  x = Species,
+  y = Sepal.Length,
+  # turn off statistical analysis
+  centrality.plotting = FALSE, 
+  results.subtitle = FALSE, 
+  bf.message = FALSE, 
+  # turn off pairwise comparisons
+  pairwise.display = "none" 
+)
+```
+
+:::
+
+::::
+
+. . . 
+
+:::: {.columns}
+
+::: {.column width='40%'}
+
+Get **only expressions**:
+
+```{.r code-line-numbers="4,6,10"}
+stats_expr <- ggpiestats(
+  Titanic_full, Survived, Sex,
+) %>% 
+  extract_subtitle()
+
+ggiraphExtra::ggSpine( 
+  data = Titanic_full,
+  aes(x = Sex, fill = Survived)
+) +
+  labs(subtitle = stats_expr)  
+```
+
+:::
+
+::: {.column width='60%'}
+
+```{r subtitle_1}
+#| label: "ggpiestats_only_plot"
+#| echo: false
+stats_expr <- ggpiestats(
+  Titanic_full, Survived, Sex,
+) %>% 
+  extract_subtitle()
+
+ggiraphExtra::ggSpine( 
+  data = Titanic_full,
+  aes(x = Sex, fill = Survived)
+) +
+  labs(subtitle = stats_expr) 
+```
+
+:::
+
+::::
+
+
+# `{ggstatsplot}`: Details about statistical reporting 
+
+## Supports different statistical approaches {.smaller}
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+## 
+
+| Functions                            | Description                                       | Parametric | Non-parametric | Robust | Bayesian |
+| :----------------------------------- | :------------------------------------------------ | :--------- | :------------- | :----- | :------- |
+| `ggbetweenstats()`                   | Between group comparisons                         | ✅         | ✅             | ✅     | ✅       |
+| `ggwithinstats()`                    | Within group comparisons                          | ✅         | ✅             | ✅     | ✅       |
+| `gghistostats()`, `ggdotplotstats()` | Distribution of a numeric variable                | ✅         | ✅             | ✅     | ✅       |
+| `ggcorrmat()`                        | Correlation matrix                                | ✅         | ✅             | ✅     | ✅       |
+| `ggscatterstats()`                   | Correlation between two variables                 | ✅         | ✅             | ✅     | ✅       |
+| `ggpiestats()`, `ggbarstats()`       | Association between categorical variables         | ✅         | `NA`           | `NA`   | ✅       |
+| `ggpiestats()`, `ggbarstats()`       | Equal proportions for categorical variable levels | ✅         | `NA`           | `NA`   | ✅       |
+| `ggcoefstats()`                      | Regression modeling                               | ✅         | ✅             | ✅     | ✅       |
+| `ggcoefstats()`                      | Random-effects meta-analysis                      | ✅         | `NA`           | ✅     | ✅       |
+
+:::
+
+## Toggling statistical approaches 🔀 {.smaller}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+**Parametric**
+
+```{.r code-line-numbers="6,14,22"}
+# anova
+ggbetweenstats(
+  data = mtcars,
+  x = cyl,
+  y = wt,
+  type = "p" 
+)
+
+# correlation analysis
+ggscatterstats(
+  data = mtcars,
+  x = wt,
+  y = mpg,
+  type = "p" 
+)
+
+# t-test
+gghistostats(
+  data = mtcars,
+  x = wt,
+  test.value = 2,
+  type = "p" 
+)
+```
+:::
+
+::: {.column width='50%'}
+
+**Non-parametric**
+
+```{.r code-line-numbers="6,14,22"}
+# anova
+ggbetweenstats(
+  data = mtcars,
+  x = cyl,
+  y = wt,
+  type = "np" 
+)
+
+# correlation analysis
+ggscatterstats(
+  data = mtcars,
+  x = wt,
+  y = mpg,
+  type = "np" 
+)
+
+# t-test
+gghistostats(
+  data = mtcars,
+  x = wt,
+  test.value = 2,
+  type = "np" 
+)
+```
+
+:::
+
+::::
+
+
+## Alternative: Pure Pain {.smaller}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+
+:::{.callout-caution collapse=false appearance='default' icon=true}
+
+## Hunting for packages
+
+📦 for inferential statistics (`{stats}`) <br>
+📦 computing effect size + CIs (`{effectsize}`) <br> 
+📦 for descriptive statistics (`{skimr}`) <br> 
+📦 pairwise comparisons (`{multcomp}`) <br>
+📦 Bayesian hypothesis testing (`{BayesFactor}`) <br> 
+📦 Bayesian estimation (`{bayestestR}`) <br> 
+📦 ... <br> 
+
+![](media/packages.gif){.relative fig-align="center" width="350" height="250"}
+
+:::
+
+:::
+
+::: {.column width='50%'}
+
+:::{.callout-caution collapse=false appearance='default' icon=true}
+
+## Inconsistent APIs
+
+🤔 accepts data frame, vector, matrix? <br>
+🤔 long/wide format data? <br> 
+🤔 works with `NA`s? <br>
+🤔 returns data frame, vector, matrix? <br>
+🤔 works with tibbles? <br> 
+🤔 has all necessary details? <br> 
+🤔 ... <br>
+
+![](media/monkey.gif){.relative fig-align="center" width="350" height="250"}
+
+:::
+
+:::
+
+::::
+
+## Benefits in details {.smaller}
+
+`{ggstatsplot}` combines data visualization and statistical analysis in a single step.
+
+It...
+
+:::{style="background-color: #FFDCA9; padding: 20px; border-radius: 25px;"}
+
+::: {.fragment .highlight-current-blue}
+- provides ready-made plots with information-rich defaults
+:::
+
+::: {.fragment .highlight-current-blue}
+- minimizes the chances of making errors in statistical reporting
+:::
+
+::: {.fragment .highlight-current-blue}
+- follows best practices in data visualization and statistical reporting
+:::
+
+::: {.fragment .highlight-current-blue}
+- helps evaluate statistical analysis in the context of the underlying data 
+:::
+
+::: {.fragment .highlight-current-blue}
+- highlights the importance of the effect by providing effect size measures
+:::
+
+::: {.fragment .highlight-current-blue}
+- provides an easy way to evaluate *absence* of an effect using Bayesian framework 
+:::
+
+::: {.fragment .highlight-current-blue}
+- extremely beginner-friendly
+:::
+
+:::
+
+## Simplified data analysis workflow {.smaller}
+
+![](media/ds_workflow.png)
+
+::: footer
+[(Grolemund & Wickham, *R for Data Science*, 2017)](https://r4ds.had.co.nz/)
+:::
+
+<br>
+
+:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
+
+✅ Quick insight into data by combining visualization and modeling!
+
+:::
+
+
+## Community Involvement {.smaller}
+
+- 11 contributors
+
+- 3 reverse dependencies
+
+- Widely covered in [YouTube videos](https://www.youtube.com/results?search_query=ggstatsplot) and [social media posts](https://x.com/search?q=ggstatsplot&src=typed_query)
+
+- Almost 100% resolution rate on [StackOverflow](https://stackoverflow.com/questions/tagged/ggstatsplot) (> 150 questions)
+
+- Over 100 daily visitors on [GitHub repo](https://github.com/IndrajeetPatil/ggstatsplot/)
+
+- Usage in a wide [range of fields](https://scholar.google.com/scholar?hl=en&scisbd=1&as_sdt=0%2C22&q=ggstatsplot&btnG=): psychology, biology, medicine, economics, etc.
+
+- Usage in data science training programs
+
+## A grain of salt {.smaller}
+
+#### The "Golem of Prague" problem 
+
+:::: {.columns}
+
+::: {.column width='40%'}
+
+<br><br>
+
+:::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
+❌  Promotes mindless application of statistical tests.
+:::
+
+:::
+
+::: {.column width='60%'}
+![](media/golem-problem.jpeg){.relative fig-align="center"}
+:::
+
+::::
+
+#### No stable release yet.
