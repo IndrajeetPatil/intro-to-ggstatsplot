@@ -606,18 +606,18 @@ graph LR
 
 # Thank You 😊
 
-:::{style="font-size: 20px;"}
-Source code for these slides can be found [on GitHub](https://github.com/IndrajeetPatil/intro-to-ggstatsplot).
-:::
+Happy visualizing and reporting!
 
 # For more
+
+Source code for these slides can be found [on GitHub](https://github.com/IndrajeetPatil/intro-to-ggstatsplot).
 
 If you are interested in good programming and software development practices, check out my other [slide
 decks](https://sites.google.com/site/indrajeetspatilmorality/presentations).
 
 # Find me at...
 
-{{< fa brands linkedin >}} [LikedIn](https://www.linkedin.com/in/indrajeet-patil-397865174/)
+{{< fa brands linkedin >}} [LinkedIn](https://www.linkedin.com/in/indrajeet-patil-ph-d-397865174/)
 
 {{< fa brands github >}} [GitHub](http://github.com/IndrajeetPatil)
 
