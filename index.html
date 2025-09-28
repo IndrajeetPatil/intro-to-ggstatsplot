@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB"><head>
+<html lang="en-GB" dir="ltr"><head>
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/tabby.min.js"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
@@ -12,7 +12,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.2">
 <meta name="author" content="Indrajeet Patil">
-<meta name="dcterms.date" content="2025-09-28 17:06:46.868034">
+<meta name="dcterms.date" content="2025-09-28 17:16:05.724904">
 <meta name="keywords" content="ggstatsplot, data visualization, statistical reporting, software development, R package">
 <title>Statistical Visualizations with {ggstatsplot}: A Biography</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -192,7 +192,29 @@
       margin-right: 0; 
     }
   </style>
+<!-- Google tag (gtag.js) --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-H8PN2S7LEE"></script><script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-H8PN2S7LEE");
+  </script><meta property="og:title" content="Statistical Visualizations with {ggstatsplot}: A Biography">
+<meta property="og:description" content="Introduction to ggstatsplot: Create informative statistical visualizations with ease. Learn about the R package that combines statistical testing with beautiful plots.">
+<meta property="og:image" content="https://indrajeetpatil.github.io/intro-to-ggstatsplot/media/social-media-card.png">
+<meta property="og:url" content="https://indrajeetpatil.github.io/intro-to-ggstatsplot/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ggstatsplot Introduction">
+<meta name="author" content="Indrajeet Patil">
+<meta name="keywords" content="ggstatsplot, R, statistics, data visualization, statistical plots, ggplot2">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Statistical Visualizations with {ggstatsplot}: A Biography">
+<meta name="twitter:description" content="Introduction to ggstatsplot: Create informative statistical visualizations with ease. Learn about the R package that combines statistical testing with beautiful plots.">
+<meta name="twitter:image" content="https://indrajeetpatil.github.io/intro-to-ggstatsplot/media/social-media-card.png">
+<meta name="twitter:creator" content="@patilindrajeets">
 <script src="index_files/libs/quarto-diagram/mermaid.min.js"></script><script src="index_files/libs/quarto-diagram/mermaid-init.js"></script><link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link rel="canonical" href="https://indrajeetpatil.github.io/intro-to-ggstatsplot/">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -325,7 +347,7 @@
 <p>E.g., for hypothesis about differences <em>between</em> groups</p>
 <div class="columns">
 <div class="column" style="width:65%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">ggbetweenstats</span>(iris, Species, Sepal.Length)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggbetweenstats</span><span class="op">(</span><span class="va">iris</span>, <span class="va">Species</span>, <span class="va">Sepal.Length</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -692,7 +714,7 @@
 <p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:patilindrajeet.science@gmail.com">E-mail</a></p>
 </section><section id="session-information" class="slide level2 smaller"><h2>Session information</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>(<span class="at">include_base =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://sessioninfo.r-lib.org/reference/session_info.html">session_info</a></span><span class="op">(</span>include_base <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>─ Session info ───────────────────────────────────────────────────────────────
  setting  value
@@ -830,11 +852,11 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">ggwithinstats</span>(</span>
-<span id="cb4-2"><a href=""></a>  <span class="at">data =</span> WRS2<span class="sc">::</span>WineTasting,</span>
-<span id="cb4-3"><a href=""></a>  <span class="at">x =</span> Wine,</span>
-<span id="cb4-4"><a href=""></a>  <span class="at">y =</span> Taste</span>
-<span id="cb4-5"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggwithinstats</span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="fu">WRS2</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/WRS2/man/WineTasting.html">WineTasting</a></span>,</span>
+<span>  x <span class="op">=</span> <span class="va">Wine</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">Taste</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/ggwithinstats_1-1.png" width="3000"></p>
@@ -878,11 +900,11 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">gghistostats</span>(</span>
-<span id="cb5-2"><a href=""></a>  <span class="at">data =</span> movies_long,</span>
-<span id="cb5-3"><a href=""></a>  <span class="at">x =</span> budget,</span>
-<span id="cb5-4"><a href=""></a>  <span class="at">test.value =</span> <span class="dv">30</span> </span>
-<span id="cb5-5"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">gghistostats</span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">movies_long</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">budget</span>,</span>
+<span>  test.value <span class="op">=</span> <span class="fl">30</span> </span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/gghistostats_1-1.png" width="3000"></p>
@@ -926,12 +948,12 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">ggdotplotstats</span>(</span>
-<span id="cb6-2"><a href=""></a>  <span class="at">data =</span> movies_long,</span>
-<span id="cb6-3"><a href=""></a>  <span class="at">x =</span> budget,</span>
-<span id="cb6-4"><a href=""></a>  <span class="at">y =</span> genre,</span>
-<span id="cb6-5"><a href=""></a>  <span class="at">test.value =</span> <span class="dv">30</span> </span>
-<span id="cb6-6"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggdotplotstats</span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">movies_long</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">budget</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">genre</span>,</span>
+<span>  test.value <span class="op">=</span> <span class="fl">30</span> </span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/ggdotplotstats_1-1.png" width="3000"></p>
@@ -974,11 +996,11 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="fu">ggscatterstats</span>(</span>
-<span id="cb7-2"><a href=""></a>  <span class="at">data =</span> movies_long,</span>
-<span id="cb7-3"><a href=""></a>  <span class="at">x =</span> budget,</span>
-<span id="cb7-4"><a href=""></a>  <span class="at">y =</span> rating</span>
-<span id="cb7-5"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggscatterstats</span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">movies_long</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">budget</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">rating</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/ggscatterstats_1-1.png" width="3000"></p>
@@ -1021,7 +1043,7 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">ggcorrmat</span>(dplyr<span class="sc">::</span>starwars)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggcorrmat</span><span class="op">(</span><span class="fu">dplyr</span><span class="fu">::</span><span class="va"><a href="https://dplyr.tidyverse.org/reference/starwars.html">starwars</a></span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/ggcorrmat_1-1.png" width="3000"></p>
@@ -1062,11 +1084,11 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">ggpiestats</span>(</span>
-<span id="cb9-2"><a href=""></a>  <span class="at">data =</span> mtcars,</span>
-<span id="cb9-3"><a href=""></a>  <span class="at">x =</span> am,</span>
-<span id="cb9-4"><a href=""></a>  <span class="at">y =</span> cyl</span>
-<span id="cb9-5"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggpiestats</span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">mtcars</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">am</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">cyl</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/ggpiestats_1-1.png" width="3000"></p>
@@ -1102,11 +1124,11 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">ggbarstats</span>(</span>
-<span id="cb10-2"><a href=""></a>  <span class="at">data =</span> mtcars,</span>
-<span id="cb10-3"><a href=""></a>  <span class="at">x =</span> am,</span>
-<span id="cb10-4"><a href=""></a>  <span class="at">y =</span> cyl</span>
-<span id="cb10-5"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggbarstats</span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">mtcars</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">am</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">cyl</span></span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/ggbarstats_1-1.png" width="3000"></p>
@@ -1142,12 +1164,12 @@
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
-<span id="cb11-2"><a href=""></a>  <span class="at">formula =</span> rating <span class="sc">~</span> mpaa,</span>
-<span id="cb11-3"><a href=""></a>  <span class="at">data =</span> movies_long</span>
-<span id="cb11-4"><a href=""></a>)</span>
-<span id="cb11-5"><a href=""></a></span>
-<span id="cb11-6"><a href=""></a><span class="fu">ggcoefstats</span>(mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span></span>
+<span>  formula <span class="op">=</span> <span class="va">rating</span> <span class="op">~</span> <span class="va">mpaa</span>,</span>
+<span>  data <span class="op">=</span> <span class="va">movies_long</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggcoefstats</span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/ggcoefstats_1-1.png" width="3000"></p>
@@ -1185,11 +1207,11 @@
 <div class="columns">
 <div class="column" style="width:60%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">grouped_ggpiestats</span>(</span>
-<span id="cb12-2"><a href=""></a>  <span class="at">data =</span> mtcars,</span>
-<span id="cb12-3"><a href=""></a>  <span class="at">x =</span> cyl,</span>
-<span id="cb12-4"><a href=""></a>  <span class="at">grouping.var =</span> am </span>
-<span id="cb12-5"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">grouped_ggpiestats</span><span class="op">(</span></span>
+<span>  data <span class="op">=</span> <span class="va">mtcars</span>,</span>
+<span>  x <span class="op">=</span> <span class="va">cyl</span>,</span>
+<span>  grouping.var <span class="op">=</span> <span class="va">am</span> </span>
+<span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="index_files/figure-revealjs/grouped_1-1.png" width="3000"></p>
