@@ -4,7 +4,6 @@ format:
   revealjs: 
     theme: simple
     slide-number: c
-    #embed-resources: true
     preview-links: auto
     link-external-newwindow: true
     code-link: true
@@ -188,7 +187,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 `{ggstatsplot}` was born!
 
 :::{style="font-size: 20px;"}
-(open-sourced on [GitHub](https://github.com/IndrajeetPatil/ggstatsplot){target='_blank'} in 2017; still actively developed)
+(open-sourced on [GitHub](https://github.com/IndrajeetPatil/ggstatsplot) in 2017; still actively developed)
 :::
 
 ## Example function {.smaller}
@@ -392,7 +391,7 @@ biology, medicine, psychology, economics, etc.
 ![](media/ggstats-paper.png){.relative fig-align="center"}
 
 :::{style="background-color: #FFDCA9; padding: 10px; border-radius: 25px; text-align: center; font-size:20px;"}
-**[Improving Psychological Science Award](https://improvingpsych.org/mission/awards/){target='_blank'}** (2020)
+**[Improving Psychological Science Award](https://improvingpsych.org/mission/awards/)** (2020)
 :::
 
 <br>
@@ -552,7 +551,7 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ## Communication {.smaller}
 
-[Training material](https://sites.google.com/site/indrajeetspatilmorality/presentations){target='_blank'} on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
+[Training material](https://sites.google.com/site/indrajeetspatilmorality/presentations) on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
 
 ![](media/presentations.jpeg){.relative fig-align="center"}
 
@@ -597,7 +596,7 @@ graph LR
 # Thank You 😊
 
 :::{style="font-size: 20px;"}
-Source code for these slides can be found [on GitHub](https://github.com/IndrajeetPatil/intro-to-ggstatsplot){target='_blank'}.
+Source code for these slides can be found [on GitHub](https://github.com/IndrajeetPatil/intro-to-ggstatsplot).
 :::
 
 # For more
@@ -1373,13 +1372,13 @@ It...
 
 - 3 reverse dependencies
 
-- Widely covered in [YouTube videos](https://www.youtube.com/results?search_query=ggstatsplot){target='_blank'} and [social media posts](https://x.com/search?q=ggstatsplot&src=typed_query){target='_blank'}
+- Widely covered in [YouTube videos](https://www.youtube.com/results?search_query=ggstatsplot) and [social media posts](https://x.com/search?q=ggstatsplot&src=typed_query)
 
-- Almost 100% resolution rate on [StackOverflow](https://stackoverflow.com/questions/tagged/ggstatsplot){target='_blank'} (> 150 questions)
+- Almost 100% resolution rate on [StackOverflow](https://stackoverflow.com/questions/tagged/ggstatsplot) (> 150 questions)
 
 - Over 100 daily visitors on [GitHub repo](https://github.com/IndrajeetPatil/ggstatsplot/)
 
-- Usage in a wide [range of fields](https://scholar.google.com/scholar?hl=en&scisbd=1&as_sdt=0%2C22&q=ggstatsplot&btnG=){target='_blank'}: psychology, biology, medicine, economics, etc.
+- Usage in a wide [range of fields](https://scholar.google.com/scholar?hl=en&scisbd=1&as_sdt=0%2C22&q=ggstatsplot&btnG=): psychology, biology, medicine, economics, etc.
 
 - Usage in data science training programs
 
