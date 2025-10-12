@@ -1167,7 +1167,7 @@ ggiraphExtra::ggSpine(
 
 ::: {.column width='60%'}
 
-```{r subtitle_1}
+```{r}
 #| label: "ggpiestats_only_plot"
 #| echo: false
 stats_expr <- ggpiestats(
