@@ -11,7 +11,7 @@ Description: This presentation provides an introduction to the
     GitHub Actions workflows.
 License: CC0 1.0 Universal
 URL: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/,
-    https://indrajeetpatil.github.io/intro-to-ggstatsplot/
+    https://www.indrapatil.com/intro-to-ggstatsplot/
 BugReports: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/issues
 Depends:
     bayestestR,

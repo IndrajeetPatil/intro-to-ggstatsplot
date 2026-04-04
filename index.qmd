@@ -36,7 +36,7 @@ lang: "en"
 dir: "ltr"
 image: "media/logo.png"
 image-alt: "Preview image for presentation about ggstatsplot statistical visualizations"
-canonical-url: "https://indrajeetpatil.github.io/intro-to-ggstatsplot/"
+canonical-url: "https://www.indrapatil.com/intro-to-ggstatsplot/"
 ---
 
 ```{r}
@@ -260,7 +260,7 @@ ggbetweenstats(iris, Species, Sepal.Length)
 ![](media/collage.jpeg)
 
 :::footer
-[Appendix](https://indrajeetpatil.github.io/intro-to-ggstatsplot/#/examples-of-other-functions) provides more details.
+[Appendix](https://www.indrapatil.com/intro-to-ggstatsplot/#/examples-of-other-functions) provides more details.
 :::
 
 # Promised Land
@@ -564,7 +564,7 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ## Communication {.smaller}
 
-[Training material](https://indrajeetpatil.github.io/presentations/) on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
+[Training material](https://www.indrapatil.com/presentations/) on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
 
 ![](media/presentations.jpeg){.relative fig-align="center"}
 
@@ -615,7 +615,7 @@ Happy visualizing and reporting!
 
 ::: {style="text-align: center; font-size: 0.7em;"}
 
-Check out my other [slide decks](https://indrajeetpatil.github.io/presentations/) on software development best practices
+Check out my other [slide decks](https://www.indrapatil.com/presentations/) on software development best practices
 
 :::
 

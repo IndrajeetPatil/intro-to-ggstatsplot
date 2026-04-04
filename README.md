@@ -6,8 +6,8 @@ This is a repository for presentation about the `{ggstatsplot}`.
 
 ## Links
 
-- 📊 [Presentation slides](https://indrajeetpatil.github.io/intro-to-ggstatsplot/)
-- 🌐 [Package website](https://indrajeetpatil.github.io/ggstatsplot/)
+- 📊 [Presentation slides](https://www.indrapatil.com/intro-to-ggstatsplot/)
+- 🌐 [Package website](https://www.indrapatil.com/ggstatsplot/)
 
 ## Setup
 
