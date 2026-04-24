@@ -45,6 +45,7 @@ canonical-url: "https://www.indrapatil.com/intro-to-ggstatsplot/"
 #| label: "setup"
 library(ggstatsplot)
 library(ggplot2)
+library(magrittr)
 set.seed(123)
 ```
 

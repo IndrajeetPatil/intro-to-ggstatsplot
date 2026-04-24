@@ -1,0 +1,7 @@
+# Statistical Visualizations with {ggstatsplot}: A Biography
+
+> A Quarto RevealJS presentation by Indrajeet Patil.
+
+Canonical slides: https://www.indrapatil.com/intro-to-ggstatsplot/
+Full agent summary: https://www.indrapatil.com/intro-to-ggstatsplot/llms-full.txt
+Source: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/
