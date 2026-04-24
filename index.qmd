@@ -11,7 +11,7 @@ format:
     help: true
     include-in-header: meta-tags.html
     link-external-newwindow: true
-    google-analytics: "G-H8PN2S7LEE"
+    google-analytics: "G-3BQ49J7KYH"
     code-link: true
     fig-dpi: 300
     fig-align: center
