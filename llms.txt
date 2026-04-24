@@ -1,0 +1,28 @@
+# Statistical Visualizations with {ggstatsplot}: A Biography
+
+> A Quarto RevealJS presentation by Indrajeet Patil.
+
+A presentation on the development of {ggstatsplot} R package for statistical visualizations.
+
+## Primary URL
+
+- [Slides](https://www.indrapatil.com/intro-to-ggstatsplot/)
+
+## Source
+
+- [GitHub repository](https://github.com/IndrajeetPatil/intro-to-ggstatsplot/)
+
+## Topics
+
+- ggstatsplot
+- data visualization
+- statistical reporting
+- software development
+- R package
+- r programming
+- presentation
+- slides
+
+## Machine-readable companion
+
+- [Full agent summary](https://www.indrapatil.com/intro-to-ggstatsplot/llms-full.txt)

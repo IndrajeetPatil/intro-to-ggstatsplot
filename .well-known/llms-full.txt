@@ -1,0 +1,10 @@
+# Statistical Visualizations with {ggstatsplot}: A Biography
+
+This is the well-known discovery copy for agentic assistants.
+
+Canonical slides: https://www.indrapatil.com/intro-to-ggstatsplot/
+Root llms.txt: https://www.indrapatil.com/intro-to-ggstatsplot/llms.txt
+Root llms-full.txt: https://www.indrapatil.com/intro-to-ggstatsplot/llms-full.txt
+Source: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/
+
+Summary: A presentation on the development of {ggstatsplot} R package for statistical visualizations.

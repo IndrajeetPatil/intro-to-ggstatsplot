@@ -21,6 +21,7 @@ Depends:
     ggstatsplot (>= 0.13.3),
     ggthemes,
     knitr,
+    magrittr,
     packageRank,
     quarto,
     reticulate,
