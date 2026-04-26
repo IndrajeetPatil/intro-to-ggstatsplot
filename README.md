@@ -16,7 +16,3 @@ The package can be installed from CRAN:
 ```r
 install.packages("ggstatsplot")
 ```
-
-## Code of Conduct
-
-Please note that this project is released with a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/3/0/code_of_conduct/). By contributing to this project, you agree to abide by its terms.
