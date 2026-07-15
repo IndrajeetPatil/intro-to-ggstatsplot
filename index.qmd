@@ -34,7 +34,7 @@ author-meta: "Indrajeet Patil"
 date-meta: "`r Sys.time()`"
 lang: "en"
 dir: "ltr"
-image: "media/logo.png"
+image: "media/logo.webp"
 image-alt: "Preview image for presentation about ggstatsplot statistical visualizations"
 canonical-url: "https://www.indrapatil.com/intro-to-ggstatsplot/"
 ---
@@ -66,7 +66,7 @@ Indrajeet Patil<br>
 :::
 
 ::: {.column width='60%'}
-![](media/logo.png){.relative fig-align="center" width="350" height="350"}
+![](media/logo.webp){.relative fig-align="center" width="350" height="350"}
 :::
 
 ::::
@@ -113,7 +113,7 @@ and more...
 
 ## Internal Response
 
-![](media/this-is-fine.jpg){.relative fig-align="center"}
+![](media/this-is-fine.webp){.relative fig-align="center"}
 How to: 
 
 - avoid reporting errors?
@@ -169,7 +169,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 
 ::: {.column width="60%"}
 
-![](media/ggbooks.jpeg){.relative fig-align="center" width="500" height="300"}
+![](media/ggbooks.webp){.relative fig-align="center" width="500" height="300"}
 :::
 
 :::::
@@ -258,7 +258,7 @@ ggbetweenstats(iris, Species, Sepal.Length)
 
 ## And there is more! {.smaller}
 
-![](media/collage.jpeg)
+![](media/collage.webp)
 
 :::footer
 [Appendix](https://www.indrapatil.com/intro-to-ggstatsplot/#/examples-of-other-functions) provides more details.
@@ -292,7 +292,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 **With `{ggstatsplot}`**
 
-![](media/after_ggstats.PNG){.relative fig-align="center"}
+![](media/after_ggstats.webp){.relative fig-align="center"}
 
 :::
 
@@ -314,7 +314,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 ## Data Visualization
 
-![](media/dataviz.jpeg){.relative fig-align="center" height="400"}
+![](media/dataviz.webp){.relative fig-align="center" height="400"}
 
 :::
 
@@ -326,7 +326,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 ## Statistical Reporting
 
-![](media/stats_reporting_format.png){.relative fig-align="center"}
+![](media/stats_reporting_format.webp){.relative fig-align="center"}
 
 :::{style="font-size: 15px; text-align: center;"}
 ([Doorn et al., 2020]([https://link.springer.com/article/10.3758/s13423-020-01798-5]); 
@@ -387,7 +387,7 @@ p_downloads +
 Second most starred `{ggplot2}`-extension!
 :::
 
-![](media/ggstats-stars.png){.relative fig-align="center"}
+![](media/ggstats-stars.webp){.relative fig-align="center"}
 
 :::
 
@@ -402,7 +402,7 @@ Second most starred `{ggplot2}`-extension!
 From publications across a wide range of fields: <br>
 biology, medicine, psychology, economics, etc.
 
-![](media/ggstats-paper.png){.relative fig-align="center"}
+![](media/ggstats-paper.webp){.relative fig-align="center"}
 
 :::{style="background-color: #FFDCA9; padding: 10px; border-radius: 25px; text-align: center; font-size:20px;"}
 **[Improving Psychological Science Award](https://improvingpsych.org/mission/awards/)** (2020)
@@ -493,7 +493,7 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ::: {.column width='50%'}
 
-![](media/easystats_logo_wall.png){.relative fig-align="center"}
+![](media/easystats_logo_wall.webp){.relative fig-align="center"}
 
 :::
 
@@ -553,9 +553,9 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ## Healthy and active code base
 
-![](media/ggstats-contributions.png){.relative fig-align="center"}
+![](media/ggstats-contributions.webp){.relative fig-align="center"}
 
-![](media/pr-qa.png){.relative fig-align="center"}
+![](media/pr-qa.webp){.relative fig-align="center"}
 
 :::
 
@@ -567,7 +567,7 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 [Training material](https://www.indrapatil.com/presentations/) on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
 
-![](media/presentations.jpeg){.relative fig-align="center"}
+![](media/presentations.webp){.relative fig-align="center"}
 
 ## Biography (2017-) {.smaller}
 
@@ -1367,7 +1367,7 @@ It...
 
 ## Simplified data analysis workflow {.smaller}
 
-![](media/ds_workflow.png)
+![](media/ds_workflow.webp)
 
 ::: footer
 [(Grolemund & Wickham, *R for Data Science*, 2017)](https://r4ds.had.co.nz/)
@@ -1415,7 +1415,7 @@ It...
 :::
 
 ::: {.column width='60%'}
-![](media/golem-problem.jpeg){.relative fig-align="center"}
+![](media/golem-problem.webp){.relative fig-align="center"}
 :::
 
 ::::

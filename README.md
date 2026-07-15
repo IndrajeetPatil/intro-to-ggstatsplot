@@ -1,6 +1,6 @@
 # Statistical Visualizations with {ggstatsplot}: A Biography
 
-<img src="media/logo.png" align="right" width="240" alt="ggstatsplot logo" />
+<img src="media/logo.webp" align="right" width="240" alt="ggstatsplot logo" />
 
 This is a repository for presentation about the `{ggstatsplot}`.
 
