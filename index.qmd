@@ -323,7 +323,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 ![](media/stats_reporting_format.webp){.relative fig-align="center"}
 
 :::{style="font-size: 15px; text-align: center;"}
-([Doorn et al., 2020]([https://link.springer.com/article/10.3758/s13423-020-01798-5]); 
+([Doorn et al., 2020](https://link.springer.com/article/10.3758/s13423-020-01798-5);
 [APA Manual](https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf))
 :::
 
