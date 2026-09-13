@@ -59,3 +59,13 @@
 .reveal svg .nodeLabel p {
   color: #222 !important;
 }
+
+/* Keep inline code readable on the deck's pale green cards. */
+.reveal :not(pre) > code {
+  color: #354478;
+}
+
+/* Reveal's default current-fragment blue is too light on the orange card. */
+.reveal .slides section .fragment.highlight-current-blue.current-fragment {
+  color: #0758a8;
+}
