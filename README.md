@@ -50,6 +50,7 @@ just          # Install dependencies and start live-reload preview
 
 `just axe` opts into the `_quarto-a11y.yml` profile for local accessibility audits.
 Normal renders and deployments do not include the axe checker or report slide.
+Preview options can be forwarded, for example `just axe --no-browser --port 4200`.
 All Quarto recipes use the native R engine and the dependencies in `DESCRIPTION`.
 
 ## Feedback

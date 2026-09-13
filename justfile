@@ -43,5 +43,6 @@ check:
 
 # Audit accessibility with axe-core, appending a violations report slide to the deck.
 # Uses the a11y profile because `-M axe:true` cannot override the format block in index.qmd.
-axe:
-    QUARTO_PROFILE=a11y quarto preview index.qmd
+[positional-arguments]
+axe *args:
+    QUARTO_PROFILE=a11y quarto preview index.qmd "$@"

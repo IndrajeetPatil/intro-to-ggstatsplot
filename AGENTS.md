@@ -14,6 +14,7 @@ A single-page [Quarto](https://quarto.org/) presentation rendered to [RevealJS](
 index.qmd           # All slide content (the only file you usually need to edit)
 _quarto.yml          # Quarto project config (output dir, resources list)
 _quarto-a11y.yml     # Opt-in profile enabling the axe accessibility checker (`just axe`)
+accessibility.html  # Accessible generated controls, keyboard focus, and browser zoom
 styles.css           # Custom RevealJS theme (fonts, colours, component classes)
 meta-tags.html       # OpenGraph, Twitter Card, JSON-LD, and analytics tags
 justfile             # Command runner (install, render, preview, clean, etc.)
@@ -59,6 +60,7 @@ Check which set is present to know which language context applies.
   Verify with `just axe`, which appends an "Accessibility Report" slide listing axe-core violations. Keep `axe` in
   `_quarto-a11y.yml`, not `index.qmd`, so normal renders never ship the axe-core payload. The explicit `format:`
   block in `index.qmd` takes precedence over CLI metadata such as `-M axe:true`.
+  Review all axe rules, including best-practice findings, with each slide and its fragments visible, in scroll view, and with the slide menu open. Fix actionable findings rather than filtering rules. Optional preview arguments are forwarded by `just axe` (e.g. `just axe --no-browser --port 4200`).
   Links inside muted text need a non-colour cue (e.g. `text-decoration: underline`) to satisfy WCAG 1.4.1.
 - **Icons.** Icons use lightweight HTML spans backed by only the required SVG path data in the custom stylesheet; no icon-font or Quarto icon extension is needed.
   When adding an icon, add only its mask data, preserve the source licence attribution, keep an accessible label where the icon conveys meaning, and render the deck to verify it.
