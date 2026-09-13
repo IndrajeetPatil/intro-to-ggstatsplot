@@ -10,6 +10,7 @@ format:
     touch: true
     help: true
     include-in-header: meta-tags.html
+    include-after-body: accessibility.html
     link-external-newwindow: true
     google-analytics: "G-3BQ49J7KYH"
     code-link: true
@@ -60,13 +61,13 @@ Indrajeet Patil<br>
 :::
 
 ::: {.column width='60%'}
-![](media/logo.webp){.relative fig-align="center" width="350" height="350"}
+![](media/logo.webp){.relative fig-align="center" width="350" height="350" fig-alt="ggstatsplot hexagonal logo: a person reading a book of statistics and plots."}
 :::
 
 ::::
 
-::: {.footer style="text-align: center; font-size: 0.55em; color: #999; position: absolute; bottom: 20px; left: 0; right: 0;"}
-Source code: [github.com/IndrajeetPatil/intro-to-ggstatsplot](https://github.com/IndrajeetPatil/intro-to-ggstatsplot)
+::: {.footer style="text-align: center; font-size: 0.55em; color: #666; position: absolute; bottom: 20px; left: 0; right: 0;"}
+Source code: [github.com/IndrajeetPatil/intro-to-ggstatsplot](https://github.com/IndrajeetPatil/intro-to-ggstatsplot){style="text-decoration: underline;"}
 :::
 
 # Genesis
@@ -107,7 +108,7 @@ and more...
 
 ## Internal Response
 
-![](media/this-is-fine.webp){.relative fig-align="center"}
+![](media/this-is-fine.webp){.relative fig-align="center" fig-alt="A dog sits in a burning room saying, This is fine, illustrating complacency amid research problems."}
 How to: 
 
 - avoid reporting errors?
@@ -131,9 +132,9 @@ Information-rich, ready-made statistical visualizations
 (minimal effort and maximum transparency)
 :::
 
-## A visualization with statistical summary {.smaller}
+## A visualization with statistical summary {.smaller .nostretch}
 
-![](media/datasaurus.gif)
+![](media/datasaurus.gif){height="422" style="max-width: 100%;" fig-alt="Animated scatterplots change shape while their means, standard deviations, and correlation remain nearly identical, showing why summary statistics alone can mislead."}
 
 :::{style="background-color: #FDE7BB; padding: 20px; border-radius: 25px; text-align: center;"}
 
@@ -163,7 +164,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 
 ::: {.column width="60%"}
 
-![](media/ggbooks.webp){.relative fig-align="center" width="500" height="300"}
+![](media/ggbooks.webp){.relative fig-align="center" width="500" height="300" fig-alt="Covers of The Grammar of Graphics by Leland Wilkinson and ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham."}
 :::
 
 :::::
@@ -172,7 +173,7 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 
 ::: {.column width="40%"}
 
-![](media/cat_trademill.gif){.relative fig-align="center" width="350" height="350}
+![](media/cat_trademill.gif){.relative fig-align="center" width="350" fig-alt="A cat on a treadmill reaches for food labeled the plot I want, illustrating the effort of building plots manually."}
 
 :::
 
@@ -212,6 +213,7 @@ ggbetweenstats(iris, Species, Sepal.Length)
 
 ```{r}
 #| label: "ggbetweenstats_1"
+#| fig-alt: "Sepal length distributions for the three iris species, with raw observations, group means, uncertainty, and statistical comparisons."
 #| echo: false
 #| eval: true
 #| include: true
@@ -250,9 +252,9 @@ ggbetweenstats(iris, Species, Sepal.Length)
 
 ::::
 
-## And there is more! {.smaller}
+## And there is more! {.smaller .nostretch}
 
-![](media/collage.webp)
+![](media/collage.webp){height="575" style="max-width: 100%;" fig-alt="Examples of ggstatsplot output: stacked bars, regression coefficients, correlation matrix, histogram, grouped pie charts, and a scatterplot with marginal distributions."}
 
 :::footer
 [Appendix](https://www.indrapatil.com/intro-to-ggstatsplot/#/examples-of-other-functions) provides more details.
@@ -286,7 +288,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 **With `{ggstatsplot}`**
 
-![](media/after_ggstats.webp){.relative fig-align="center"}
+![](media/after_ggstats.webp){.relative fig-align="center" fig-alt="Datasaurus scatterplot with marginal histograms, a fitted line, uncertainty band, and statistical annotations; the dinosaur shape reveals structure despite a near-zero correlation."}
 
 :::
 
@@ -308,7 +310,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 ## Data Visualization
 
-![](media/dataviz.webp){.relative fig-align="center" height="400"}
+![](media/dataviz.webp){.relative fig-align="center" height="400" fig-alt="Covers of visualization references by Stephen Few, Edward Tufte, William Cleveland, and Claus Wilke that inform the plotting defaults."}
 
 :::
 
@@ -320,7 +322,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 ## Statistical Reporting
 
-![](media/stats_reporting_format.webp){.relative fig-align="center"}
+![](media/stats_reporting_format.webp){.relative fig-align="center" fig-alt="Annotated statistical reporting templates identify test statistics, significance, effect sizes, uncertainty intervals, sample sizes, Bayes factors, and priors."}
 
 :::{style="font-size: 15px; text-align: center;"}
 ([Doorn et al., 2020](https://link.springer.com/article/10.3758/s13423-020-01798-5);
@@ -368,6 +370,7 @@ p_downloads <- plot(
 
 ```{r}
 #| label: "cran_downloads_print"
+#| fig-alt: "Daily CRAN downloads of ggstatsplot since April 2018, with a smoothed trend."
 #| fig-align: center
 #| echo: false
 #| eval: true
@@ -381,7 +384,7 @@ p_downloads +
 Second most starred `{ggplot2}`-extension!
 :::
 
-![](media/ggstats-stars.webp){.relative fig-align="center"}
+![](media/ggstats-stars.webp){.relative fig-align="center" fig-alt="GitHub repository card for ggstatsplot showing about two thousand stars and 190 forks in the captured snapshot."}
 
 :::
 
@@ -396,7 +399,7 @@ Second most starred `{ggplot2}`-extension!
 From publications across a wide range of fields: <br>
 biology, medicine, psychology, economics, etc.
 
-![](media/ggstats-paper.webp){.relative fig-align="center"}
+![](media/ggstats-paper.webp){.relative fig-align="center" fig-alt="First page of the Journal of Open Source Software article Visualizations with statistical details: The ggstatsplot approach by Indrajeet Patil."}
 
 :::{style="background-color: #FFDCA9; padding: 10px; border-radius: 25px; text-align: center; font-size:20px;"}
 **[Improving Psychological Science Award](https://improvingpsych.org/mission/awards/)** (2020)
@@ -457,7 +460,6 @@ flowchart LR
     class note note
 ```
 
-#### 
 
 ## Collaborative Solutions {.smaller}
 
@@ -487,13 +489,13 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ::: {.column width='50%'}
 
-![](media/easystats_logo_wall.webp){.relative fig-align="center"}
+![](media/easystats_logo_wall.webp){.relative fig-align="center" fig-alt="Logos of the easystats packages, including insight, parameters, performance, effectsize, bayestestR, correlation, see, report, modelbased, and datawizard."}
 
 :::
 
 ::::
 
-#### Making it a habit
+### Making it a habit
 
 :::: {.columns}
 
@@ -547,9 +549,9 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ## Healthy and active code base
 
-![](media/ggstats-contributions.webp){.relative fig-align="center"}
+![](media/ggstats-contributions.webp){.relative fig-align="center" fig-alt="GitHub contribution chart showing sustained development of ggstatsplot from 2018 through 2024."}
 
-![](media/pr-qa.webp){.relative fig-align="center"}
+![](media/pr-qa.webp){.relative fig-align="center" fig-alt="GitHub pull request status reporting that all 24 checks have passed."}
 
 :::
 
@@ -557,11 +559,11 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ::::
 
-## Communication {.smaller}
+## Communication {.smaller .nostretch}
 
 [Training material](https://www.indrapatil.com/presentations/) on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
 
-![](media/presentations.webp){.relative fig-align="center"}
+![](media/presentations.webp){.relative fig-align="center" height="500" fig-alt="Four training decks cover preventive care, DRY development, naming, and snapshot testing for R packages."}
 
 ## Biography (2017-) {.smaller}
 
@@ -643,6 +645,7 @@ Hypothesis about group differences: repeated measures design
 ::: {.column width='65%'}
 ```{r}
 #| label: "ggwithinstats_1"
+#| fig-alt: "Repeated-measures comparison of wine taste scores across wine types, showing individual observations and statistical summaries."
 ggwithinstats(
   data = WRS2::WineTasting,
   x = Wine,
@@ -688,6 +691,7 @@ Distribution of a numeric variable
 
 ```{r}
 #| label: "gghistostats_1"
+#| fig-alt: "Histogram of movie budgets, with descriptive and inferential statistics comparing the distribution with a reference value of 30."
 gghistostats(
   data = movies_long,
   x = budget,
@@ -733,6 +737,7 @@ Labeled numeric variable
 
 ```{r}
 #| label: "ggdotplotstats_1"
+#| fig-alt: "Movie budgets by genre, displayed as a labeled dot plot with statistical summaries and a reference value of 30."
 ggdotplotstats(
   data = movies_long,
   x = budget,
@@ -778,6 +783,7 @@ Hypothesis about correlation: Two numeric variables
 
 ```{r}
 #| label: "ggscatterstats_1"
+#| fig-alt: "Scatterplot of movie budget against rating, with marginal distributions, a fitted relationship, and correlation statistics."
 ggscatterstats(
   data = movies_long,
   x = budget,
@@ -822,6 +828,7 @@ Hypothesis about correlation: Multiple numeric variables
 
 ```{r}
 #| label: "ggcorrmat_1"
+#| fig-alt: "Correlation matrix for numeric variables in the Star Wars dataset, using color and labels to show the direction and strength of relationships."
 ggcorrmat(dplyr::starwars)
 ```
 :::
@@ -861,6 +868,7 @@ Hypothesis about composition of categorical variables
 
 ```{r}
 #| label: "ggpiestats_1"
+#| fig-alt: "Pie charts comparing transmission categories across cylinder groups in the mtcars dataset, with proportions and association statistics."
 ggpiestats(
   data = mtcars,
   x = am,
@@ -898,6 +906,7 @@ Hypothesis about composition of categorical variables
 
 ```{r}
 #| label: "ggbarstats_1"
+#| fig-alt: "Stacked bar chart comparing transmission categories across cylinder groups in mtcars, with counts, proportions, and association statistics."
 ggbarstats(
   data = mtcars,
   x = am,
@@ -935,6 +944,7 @@ Hypothesis about regression coefficients
 
 ```{r}
 #| label: "ggcoefstats_1"
+#| fig-alt: "Regression coefficient estimates and uncertainty intervals for a model of movie ratings by MPAA category."
 mod <- lm(
   formula = rating ~ mpaa,
   data = movies_long
@@ -975,6 +985,7 @@ Iterating over a grouping variable
 
 ::: {.column width='60%'}
 ```{r grouped_1}
+#| fig-alt: "Pie charts of cylinder counts in mtcars, separately for automatic and manual transmission groups, with proportions and statistical summaries."
 grouped_ggpiestats(
   data = mtcars,
   x = cyl,
@@ -1036,6 +1047,7 @@ ggbetweenstats(
 
 ```{r}
 #| label: "ggbetweenstats_4"
+#| fig-alt: "Movie rating distributions by MPAA category, demonstrating a custom Economist theme and Darjeeling color palette."
 #| echo: false
 ggbetweenstats(
   data = movies_long,
@@ -1075,6 +1087,7 @@ ggbetweenstats(
 
 ```{r}
 #| label: "ggbetweenstats_5"
+#| fig-alt: "Car weight distributions by transmission type, demonstrating Bayesian statistics and a duplicated vertical axis."
 #| echo: false
 ggbetweenstats(
   data = mtcars,
@@ -1121,6 +1134,7 @@ ggbetweenstats(
 
 ```{r}
 #| label: "ggbetweenstats_only_plot"
+#| fig-alt: "Iris sepal length distributions by species with raw points and violin and box plots; statistical annotations and pairwise comparisons are turned off."
 #| echo: false
 ggbetweenstats(
   data = iris,
@@ -1166,6 +1180,7 @@ ggiraphExtra::ggSpine(
 
 ```{r}
 #| label: "ggpiestats_only_plot"
+#| fig-alt: "Mosaic-style plot of Titanic survival by sex, with a statistical expression extracted from ggpiestats used as the subtitle."
 #| echo: false
 stats_expr <- ggpiestats(
   Titanic_full, Survived, Sex,
@@ -1293,7 +1308,7 @@ gghistostats(
 📦 Bayesian estimation (`{bayestestR}`) <br> 
 📦 ... <br> 
 
-![](media/packages.gif){.relative fig-align="center" width="350" height="250"}
+![](media/packages.gif){.relative fig-align="center" width="350" height="250" fig-alt="A worker struggles with many packages on a loading platform, illustrating the burden of coordinating many statistical packages."}
 
 :::
 
@@ -1313,7 +1328,7 @@ gghistostats(
 🤔 has all necessary details? <br> 
 🤔 ... <br>
 
-![](media/monkey.gif){.relative fig-align="center" width="350" height="250"}
+![](media/monkey.gif){.relative fig-align="center" width="350" height="250" fig-alt="A monkey uses a laptop, humorously illustrating the frustration of doing repetitive analysis manually."}
 
 :::
 
@@ -1359,9 +1374,9 @@ It...
 
 :::
 
-## Simplified data analysis workflow {.smaller}
+## Simplified data analysis workflow {.smaller .nostretch}
 
-![](media/ds_workflow.webp)
+![](media/ds_workflow.webp){height="330" style="max-width: 100%;" fig-alt="Data analysis proceeds from import and tidying into an iterative cycle of transformation, visualization, and modeling, followed by communication."}
 
 ::: footer
 [(Grolemund & Wickham, *R for Data Science*, 2017)](https://r4ds.had.co.nz/)
@@ -1394,7 +1409,7 @@ It...
 
 ## A grain of salt {.smaller}
 
-#### The "Golem of Prague" problem 
+### The "Golem of Prague" problem
 
 :::: {.columns}
 
@@ -1409,9 +1424,9 @@ It...
 :::
 
 ::: {.column width='60%'}
-![](media/golem-problem.webp){.relative fig-align="center"}
+![](media/golem-problem.webp){.relative fig-align="center" fig-alt="Richard McElreath’s Statistical Rethinking book beside an illustration of the Golem of Prague, warning that tools execute instructions without understanding intent."}
 :::
 
 ::::
 
-#### No stable release yet.
+### No stable release yet.

@@ -13,7 +13,9 @@ A single-page [Quarto](https://quarto.org/) presentation rendered to [RevealJS](
 ```
 index.qmd           # All slide content (the only file you usually need to edit)
 _quarto.yml          # Quarto project config (output dir, resources list)
-style.css            # Custom RevealJS theme (fonts, colours, component classes)
+_quarto-a11y.yml     # Opt-in profile enabling the axe accessibility checker (`just axe`)
+accessibility.html  # Accessible generated controls, keyboard focus, and browser zoom
+styles.css           # Custom RevealJS theme (fonts, colours, component classes)
 meta-tags.html       # OpenGraph, Twitter Card, JSON-LD, and analytics tags
 justfile             # Command runner (install, render, preview, clean, etc.)
 media/               # Images: evidence screenshots, illustrations, social card
@@ -41,9 +43,7 @@ uv.lock              # Locked Python dependencies
 R-based decks have instead:
 
 ```
-renv.lock            # Locked R dependencies
-renv/                # renv library and infrastructure (library/ is gitignored)
-.Rprofile            # Bootstraps renv on session start
+DESCRIPTION          # R dependencies and minimum supported R version
 ```
 
 Check which set is present to know which language context applies.
@@ -52,15 +52,21 @@ Check which set is present to know which language context applies.
 
 - **Single-file deck.** All slides live in `index.qmd`. There are no partial includes or multi-file splits.
 - **Slide syntax.** Slides are separated by `##` headings. Use Quarto's RevealJS dialect: fenced divs (`:::`), columns (`.columns` / `.column`), raw HTML blocks (`{=html}`), and the `{.smaller}` class for dense slides.
-- **Inline styling.** Visual design uses inline `style` attributes on fenced divs with a small palette of background colours (e.g. `#e3f2fd`, `#e8f5e9`, `#fff3e0`, `#ffebee`, `#FFFBC1`, `#f8f9fa`). The CSS maps these to the custom theme. Do not change these colour values without updating `style.css`.
-- **Image classes.** Images may use semantic classes (e.g. `.hero`, `.artifact`, `.illustration`) that control border, shadow, and rounding in `style.css`. Check the existing CSS before adding new image classes.
+- **Inline styling.** Visual design uses inline `style` attributes on fenced divs with a small palette of background colours (e.g. `#e3f2fd`, `#e8f5e9`, `#fff3e0`, `#ffebee`, `#FFFBC1`, `#f8f9fa`). The CSS maps these to the custom theme. Do not change these colour values without updating `styles.css`.
+- **Scroll-view image sizing.** Slides with top-level images that otherwise collapse in native `?view=scroll` use `.nostretch` and an explicit image `height` to preserve their live-slide dimensions. Check image visibility in both views when editing them.
+- **Image classes.** Images may use semantic classes (e.g. `.hero`, `.artifact`, `.illustration`) that control border, shadow, and rounding in `styles.css`. Check the existing CSS before adding new image classes.
 - **Sources.** Every factual claim has a source citation at the bottom of its slide in a small-font centered div. Keep this pattern.
 - **Accessibility.** Images must have `fig-alt` text. Raw HTML widgets use `role="img"` and `aria-label`. Keep these.
+  Verify with `just axe`, which appends an "Accessibility Report" slide listing axe-core violations. Keep `axe` in
+  `_quarto-a11y.yml`, not `index.qmd`, so normal renders never ship the axe-core payload. The explicit `format:`
+  block in `index.qmd` takes precedence over CLI metadata such as `-M axe:true`.
+  Review all axe rules, including best-practice findings, with each slide and its fragments visible, in scroll view, and with the slide menu open. Fix actionable findings rather than filtering rules. Optional preview arguments are forwarded by `just axe` (e.g. `just axe --no-browser --port 4200`).
+  Links inside muted text need a non-colour cue (e.g. `text-decoration: underline`) to satisfy WCAG 1.4.1.
 - **Icons.** Icons use lightweight HTML spans backed by only the required SVG path data in the custom stylesheet; no icon-font or Quarto icon extension is needed.
   When adding an icon, add only its mask data, preserve the source licence attribution, keep an accessible label where the icon conveys meaning, and render the deck to verify it.
 - **Mermaid performance boundary.** Keep Mermaid diagrams as Mermaid source. Do not replace them with pre-rendered SVGs solely to reduce the website bundle.
-- **No code execution.** The YAML front matter sets `execute: eval: false`. Code blocks are for display only; they are not executed during render.
-- **Compute engine.** Python decks declare `jupyter: python3` in the front matter; R decks declare `engine: knitr`. The virtualenv or renv exists to satisfy Quarto's engine, not to run slide code.
+- **Code execution.** This deck sets `execute: eval: true` and executes R chunks to produce plots and usage statistics. Preserve its setup chunk and existing execution settings.
+- **Compute engine.** Quarto discovers the knitr engine from the R chunks. R dependencies and the minimum supported R version are declared in `DESCRIPTION`.
 
 ## Commands
 
@@ -73,10 +79,10 @@ just preview   # Live-reload dev server
 just open      # Alias for preview (live-reload dev server over localhost)
 just clean     # Remove build artifacts
 just check     # Verify Quarto setup
-just update    # Update language dependencies
+just axe       # Preview with the axe accessibility checker enabled
 ```
 
-Python decks prefix the render command with `QUARTO_PYTHON=.venv/bin/python`. R decks call `quarto render` directly (R is discovered automatically). See the `justfile` for exact commands.
+Python decks wrap Quarto in `uv run` (e.g. `uv run quarto render index.qmd`), which syncs the locked environment and puts the project interpreter on `PATH` so Quarto discovers it automatically. R decks call `quarto render` directly (R is discovered automatically). See the `justfile` for exact commands.
 
 ## Editing slides
 
@@ -90,7 +96,7 @@ When modifying `index.qmd`:
 
 ## Editing styles
 
-`style.css` defines CSS custom properties under `:root` and component classes for complex HTML widgets. The variable names and widget classes vary per deck. When adding a new widget, follow the naming and structure patterns already present in the file.
+`styles.css` defines CSS custom properties under `:root` and component classes for complex HTML widgets. The variable names and widget classes vary per deck. When adding a new widget, follow the naming and structure patterns already present in the file.
 
 ## SEO and discoverability files
 
@@ -100,7 +106,8 @@ When modifying `index.qmd`:
 
 ## CI/CD
 
-- The GitHub Actions workflow in `.github/workflows/` renders the deck and deploys to GitHub Pages on push to `main`. It calls a reusable workflow from `IndrajeetPatil/workflows` (Python and R decks use different workflow files). Do not inline the workflow; update the ref SHA if the upstream workflow changes.
+- The GitHub Actions workflow in `.github/workflows/` renders the deck and deploys to GitHub Pages on push to `main`. It calls a reusable workflow from `IndrajeetPatil/workflows` (Python and R decks use different workflow files). Do not inline the workflow.
+- **Reference the first-party reusable workflow as `@main`, not a commit SHA.** Tracking `main` intentionally brings upstream fixes immediately, including stable Quarto and removal of the unused FontAwesome extension install.
 - Dependabot keeps GitHub Actions dependencies up to date weekly. Python decks also have Dependabot configured for `uv`; R decks do not use Dependabot for R packages.
 
 ## What not to do
@@ -108,6 +115,7 @@ When modifying `index.qmd`:
 - Do not add new top-level files without a clear reason; the project intentionally has a flat structure.
 - Do not split `index.qmd` into multiple files.
 - Do not change the Quarto theme from `simple` or the output format from `revealjs`.
-- Do not enable code execution (`eval: true`) unless the presentation genuinely needs computed output.
+- Preserve the existing executed R examples; this presentation needs their computed output.
 - Do not commit `_site/`, `_extensions/`, or `.quarto/` (all gitignored). For Python decks, `.venv/` is also gitignored; for R decks, `renv/library/` and `renv/staging/` are gitignored.
 - Do not modify the reusable CI workflow inline; it lives in a separate repository.
+- Do not pin the first-party reusable workflow to a commit SHA; use `@main` (see CI/CD).
