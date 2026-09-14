@@ -38,7 +38,7 @@ just install
 
 ```bash
 just help     # Show all available commands
-just install  # Install R dependencies from DESCRIPTION
+just install  # Install R dependencies and the a11y extension
 just render   # Render slides to HTML
 just preview  # Start a live preview with auto-reload
 just open     # Alias for preview (live-reload dev server over localhost)
@@ -52,6 +52,23 @@ just          # Install dependencies and start live-reload preview
 Normal renders and deployments do not include the axe checker or report slide.
 Preview options can be forwarded, for example `just axe --no-browser --port 4200`.
 All Quarto recipes use the native R engine and the dependencies in `DESCRIPTION`.
+
+### Accessibility
+
+`just install` and the shared CI workflow install the latest
+[`quarto-revealjs-a11y`](https://github.com/mcanouil/quarto-revealjs-a11y) directly
+from upstream with `quarto add mcanouil/quarto-revealjs-a11y --no-prompt`.
+The extension handles browser zoom, slide isolation, focus indicators, link
+underlines, reduced motion, and screen-reader announcements.
+
+The `accessibility.html` helper still handles scrollable code, slide-menu focus,
+and vertical-slide semantics. Unused tabset handling has been removed.
+The extension's slide-menu patch and accessibility settings panel are disabled
+as in the reference deck: version 0.2.3 introduces ARIA and contrast failures in
+those components.
+
+Use `just axe` to inspect slides, fragments, and menu panels in presentation and
+scroll views. Normal builds omit the axe checker.
 
 ## Feedback
 

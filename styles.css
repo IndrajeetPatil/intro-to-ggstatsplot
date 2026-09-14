@@ -33,18 +33,6 @@
   --deck-icon-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNNDggNjRDMjEuNSA2NCAwIDg1LjUgMCAxMTJjMCAxNS4xIDcuMSAyOS4zIDE5LjIgMzguNEwyMzYuOCAzMTMuNmMxMS40IDguNSAyNyA4LjUgMzguNCAwTDQ5Mi44IDE1MC40YzEyLjEtOS4xIDE5LjItMjMuMyAxOS4yLTM4LjRjMC0yNi41LTIxLjUtNDgtNDgtNDhMNDggNjR6TTAgMTc2TDAgMzg0YzAgMzUuMyAyOC43IDY0IDY0IDY0bDM4NCAwYzM1LjMgMCA2NC0yOC43IDY0LTY0bDAtMjA4TDI5NC40IDMzOS4yYy0yMi44IDE3LjEtNTQgMTcuMS03Ni44IDBMMCAxNzZ6Ii8+PC9zdmc+");
 }
 
-/* Text links have a visible cue beyond their color, including slide footers. */
-.reveal p a,
-.reveal li a,
-.reveal td a {
-  text-decoration: underline;
-}
-
-/* Documentation links inside code need the same non-color cue as prose links. */
-.reveal pre code a[href]:not([href=""]) {
-  text-decoration: underline;
-}
-
 /* Keep unselected lines readable; emphasize selected lines with a background. */
 .reveal .slides div.sourceCode pre code.has-line-highlights > span:not(.highlight-line) {
   opacity: 1;
@@ -68,4 +56,9 @@
 /* Reveal's default current-fragment blue is too light on the orange card. */
 .reveal .slides section .fragment.highlight-current-blue.current-fragment {
   color: #0758a8;
+}
+
+/* Quarto moves footers outside the extension's .slides link styling. */
+.reveal .footer a {
+  text-decoration: underline;
 }
