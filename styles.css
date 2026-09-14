@@ -57,3 +57,8 @@
 .reveal .slides section .fragment.highlight-current-blue.current-fragment {
   color: #0758a8;
 }
+
+/* Quarto moves footers outside the extension's .slides link styling. */
+.reveal .footer a {
+  text-decoration: underline;
+}
