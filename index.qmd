@@ -40,7 +40,7 @@ description-meta: "A presentation on the development of {ggstatsplot} R package 
 license: "CC0 1.0 Universal"
 pagetitle: "Statistical Visualizations with {ggstatsplot}: A Biography"
 author-meta: "Indrajeet Patil"
-date-meta: "2026-04-24"
+date-meta: "2024-12-18"
 lang: "en"
 dir: "ltr"
 image: "media/logo.webp"
