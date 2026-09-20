@@ -363,7 +363,7 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 :::{.callout-tip collapse=false appearance='default' icon=true}
 
-## Total downloads > **500K** (97 percentile)
+## Total downloads > **800K** (97 percentile)
 
 ```{r}
 #| label: "cran_downloads"
@@ -404,7 +404,7 @@ Second most starred `{ggplot2}`-extension!
 
 :::{.callout-tip collapse=false appearance='default' icon=true}
 
-## Total citations > **1000**
+## Total citations > **1400**
 
 From publications across a wide range of fields: <br>
 biology, medicine, psychology, economics, etc.
@@ -1403,13 +1403,13 @@ It...
 
 - 11 contributors
 
-- 3 reverse dependencies
+- 7 reverse dependencies
 
 - Widely covered in [YouTube videos](https://www.youtube.com/results?search_query=ggstatsplot) and [social media posts](https://x.com/search?q=ggstatsplot&src=typed_query)
 
-- Almost 100% resolution rate on [StackOverflow](https://stackoverflow.com/questions/tagged/ggstatsplot) (> 150 questions)
+- Most tagged questions answered on [StackOverflow](https://stackoverflow.com/questions/tagged/ggstatsplot)
 
-- Over 100 daily visitors on [GitHub repo](https://github.com/IndrajeetPatil/ggstatsplot/)
+- Hundreds of unique visitors every fortnight on [GitHub repo](https://github.com/IndrajeetPatil/ggstatsplot/)
 
 - Usage in a wide [range of fields](https://scholar.google.com/scholar?hl=en&scisbd=1&as_sdt=0%2C22&q=ggstatsplot&btnG=): psychology, biology, medicine, economics, etc.
 
@@ -1436,5 +1436,3 @@ It...
 :::
 
 ::::
-
-### No stable release yet.
