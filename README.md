@@ -1,5 +1,7 @@
 # Statistical Visualizations with {ggstatsplot}: A Biography
 
+[![Build and Deploy Presentation](https://github.com/IndrajeetPatil/intro-to-ggstatsplot/actions/workflows/build-presentation.yaml/badge.svg)](https://github.com/IndrajeetPatil/intro-to-ggstatsplot/actions/workflows/build-presentation.yaml)
+
 <img src="media/logo.webp" align="right" width="240" alt="ggstatsplot logo" />
 
 This is a repository for presentation about the `{ggstatsplot}`.
@@ -19,7 +21,7 @@ install.packages("ggstatsplot")
 
 ## Development
 
-This project uses R 4.6.0 or later (declared in `DESCRIPTION`), [Quarto](https://quarto.org/) for rendering slides, and [just](https://github.com/casey/just) as a command runner.
+This project uses R 4.6.1 or later (declared in `DESCRIPTION`), [Quarto](https://quarto.org/) for rendering slides, and [just](https://github.com/casey/just) as a command runner.
 
 ### Prerequisites
 
@@ -39,6 +41,8 @@ just install
 ```bash
 just help     # Show all available commands
 just install  # Install R dependencies and the a11y extension
+just sync     # Alias for install
+just update   # Update R dependencies to their latest versions
 just render   # Render slides to HTML
 just preview  # Start a live preview with auto-reload
 just open     # Alias for preview (live-reload dev server over localhost)
@@ -62,7 +66,9 @@ The extension handles browser zoom, slide isolation, focus indicators, link
 underlines, reduced motion, and screen-reader announcements.
 
 The `accessibility.html` helper still handles scrollable code, slide-menu focus,
-and vertical-slide semantics. Unused tabset handling has been removed.
+vertical-slide semantics, tabset tab order and arrow-key navigation, and removal
+of the empty `<aside>` left behind when footnotes move to the references slide.
+It is shared verbatim across all the decks.
 The extension's slide-menu patch and accessibility settings panel are disabled
 as in the reference deck: version 0.2.3 introduces ARIA and contrast failures in
 those components.
@@ -73,3 +79,10 @@ scroll views. Normal builds omit the axe checker.
 ## Feedback
 
 Feedback and suggestions are welcome in [the issue tracker](https://github.com/IndrajeetPatil/intro-to-ggstatsplot/issues).
+
+## License
+
+Although the current repository is published under [CC0 1.0 Universal
+(CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/), this license
+**does not** cover third-party images in the `media/` folder. If you use them,
+follow the attribution policy stated by their respective sources.

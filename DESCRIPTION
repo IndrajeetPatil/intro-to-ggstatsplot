@@ -2,34 +2,31 @@ Type: Presentation
 Package: intro-to-ggstatsplot
 Title: Statistical Visualizations with {ggstatsplot}: A Biography
 Version: 2.0
-Authors@R: 
-    person("Indrajeet", "Patil", , "patilindrajeet.science@gmail.com", role = c("cre", "aut", "cph"),
+Authors@R:
+    person("Indrajeet", "Patil", , "patilindrajeet.science@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0003-1995-6531"))
 Description: This presentation provides an introduction to the
-    `{ggstatsplot}` package.  This is not a package, and the DESCRIPTION
+    `{ggstatsplot}` package. This is not a package, and the DESCRIPTION
     file is included to make it easier to install required packages in
     GitHub Actions workflows.
 License: CC0 1.0 Universal
+Encoding: UTF-8
 URL: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/,
     https://www.indrapatil.com/intro-to-ggstatsplot/
 BugReports: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/issues
 Depends:
-    R (>= 4.6.0),
-    bayestestR,
-    datasauRus,
-    downlit,
-    ggiraphExtra,
-    ggstatsplot (>= 0.13.3),
-    ggthemes,
-    knitr,
-    magrittr,
-    packageRank,
-    quarto,
-    reticulate,
-    rstan,
-    rstantools,
-    statsExpressions,
-    xml2
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+    R (>= 4.6.1),
+    bayestestR (>= 0.19.0),
+    datasauRus (>= 0.1.9),
+    downlit (>= 0.4.5),
+    ggiraphExtra (>= 0.3.0),
+    ggstatsplot (>= 1.1.1),
+    ggthemes (>= 6.0.0),
+    knitr (>= 1.52),
+    magrittr (>= 2.0.5),
+    packageRank (>= 0.9.8),
+    quarto (>= 1.5.1),
+    rstan (>= 2.32.7),
+    rstantools (>= 2.7.1),
+    statsExpressions (>= 2.1.1),
+    xml2 (>= 1.6.0)

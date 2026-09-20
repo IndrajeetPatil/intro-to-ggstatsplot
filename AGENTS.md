@@ -15,16 +15,17 @@ index.qmd           # All slide content (the only file you usually need to edit)
 _quarto.yml          # Quarto project config (output dir, resources list)
 _quarto-a11y.yml     # Opt-in profile enabling the axe accessibility checker (`just axe`)
 accessibility.html  # Compatibility fixes supplementing the a11y extension
-styles.css           # Custom RevealJS theme (fonts, colours, component classes)
+style.css           # Custom RevealJS theme (fonts, colours, component classes)
 meta-tags.html       # OpenGraph, Twitter Card, JSON-LD, and analytics tags
 justfile             # Command runner (install, render, preview, clean, etc.)
+.editorconfig        # Shared editor settings (indentation, line endings)
 media/               # Images: evidence screenshots, illustrations, social card
 llms.txt             # Short machine-readable summary for LLM discovery
 llms-full.txt        # Extended machine-readable summary
 .well-known/         # Mirrors of llms.txt and llms-full.txt
 robots.txt           # Crawl rules
 sitemap.xml          # Sitemap for search engines
-.github/             # CI workflow (reusable, from IndrajeetPatil/workflows) and Dependabot
+.github/             # CI workflows (reusable, from IndrajeetPatil/workflows) and Dependabot
 _extensions/         # Latest a11y extension, installed by `just install` and CI (gitignored)
 _site/               # Build output (gitignored)
 ```
@@ -52,9 +53,9 @@ Check which set is present to know which language context applies.
 
 - **Single-file deck.** All slides live in `index.qmd`. There are no partial includes or multi-file splits.
 - **Slide syntax.** Slides are separated by `##` headings. Use Quarto's RevealJS dialect: fenced divs (`:::`), columns (`.columns` / `.column`), raw HTML blocks (`{=html}`), and the `{.smaller}` class for dense slides.
-- **Inline styling.** Visual design uses inline `style` attributes on fenced divs with a small palette of background colours (e.g. `#e3f2fd`, `#e8f5e9`, `#fff3e0`, `#ffebee`, `#FFFBC1`, `#f8f9fa`). The CSS maps these to the custom theme. Do not change these colour values without updating `styles.css`.
+- **Inline styling.** Visual design uses inline `style` attributes on fenced divs with a small palette of background colours (e.g. `#e3f2fd`, `#e8f5e9`, `#fff3e0`, `#ffebee`, `#FFFBC1`, `#f8f9fa`). The CSS maps these to the custom theme. Do not change these colour values without updating `style.css`.
 - **Scroll-view image sizing.** Slides with top-level images that otherwise collapse in native `?view=scroll` use `.nostretch` and an explicit image `height` to preserve their live-slide dimensions. Check image visibility in both views when editing them.
-- **Image classes.** Images may use semantic classes (e.g. `.hero`, `.artifact`, `.illustration`) that control border, shadow, and rounding in `styles.css`. Check the existing CSS before adding new image classes.
+- **Image classes.** Images may use semantic classes (e.g. `.hero`, `.artifact`, `.illustration`) that control border, shadow, and rounding in `style.css`. Check the existing CSS before adding new image classes.
 - **Sources.** Every factual claim has a source citation at the bottom of its slide in a small-font centered div. Keep this pattern.
 - **Accessibility.** Images must have `fig-alt` text. Raw HTML widgets use `role="img"` and `aria-label`. Keep these.
   Verify with `just axe`, which appends an "Accessibility Report" slide listing axe-core violations. Keep `axe` in
@@ -64,8 +65,11 @@ Check which set is present to know which language context applies.
   Links inside muted text need a non-colour cue (e.g. `text-decoration: underline`) to satisfy WCAG 1.4.1.
   The `a11y` extension supplies zoom, focus indicators, link underlines, reduced motion,
   slide isolation, and screen-reader announcements. Keep `accessibility.html` for
-  code scrolling, menu focus, and vertical-slide semantics.
-  This deck has no tabsets; reassess keyboard handling if adding any.
+  code scrolling, menu focus, vertical-slide semantics, tabset tab order and
+  arrow-key navigation, and removal of the empty `<aside>` Pandoc leaves behind
+  when `reference-location: document` moves footnotes to the references slide.
+  `accessibility.html` is shared verbatim across all decks; edit it in the
+  template, not here.
   Disable the extension's slide-menu patch and settings menu as in the reference
   deck: version 0.2.3 introduces ARIA and contrast failures in those components.
 - **Icons.** Icons use lightweight HTML spans backed by only the required SVG path data in the custom stylesheet; no icon-font or Quarto icon extension is needed.
@@ -80,6 +84,8 @@ All commands use [just](https://github.com/casey/just). The recipes are the same
 
 ```bash
 just install   # Install language dependencies and the latest a11y extension
+just sync      # Alias for install
+just update    # Update language dependencies to their latest versions
 just render    # Render index.qmd to _site/
 just preview   # Live-reload dev server
 just open      # Alias for preview (live-reload dev server over localhost)
@@ -88,7 +94,7 @@ just check     # Verify Quarto setup
 just axe       # Preview with the axe accessibility checker enabled
 ```
 
-Python decks wrap Quarto in `uv run` (e.g. `uv run quarto render index.qmd`), which syncs the locked environment and puts the project interpreter on `PATH` so Quarto discovers it automatically. R decks call `quarto render` directly (R is discovered automatically). See the `justfile` for exact commands.
+This deck renders with Quarto. R dependencies are declared in `DESCRIPTION` and installed with `pak`; CI installs them with `r-lib/actions/setup-r-dependencies`. Slides live in `index.qmd`.
 
 ## Editing slides
 
@@ -102,7 +108,7 @@ When modifying `index.qmd`:
 
 ## Editing styles
 
-`styles.css` defines CSS custom properties under `:root` and component classes for complex HTML widgets. The variable names and widget classes vary per deck. When adding a new widget, follow the naming and structure patterns already present in the file.
+`style.css` defines CSS custom properties under `:root` and component classes for complex HTML widgets. The variable names and widget classes vary per deck. When adding a new widget, follow the naming and structure patterns already present in the file.
 
 ## SEO and discoverability files
 

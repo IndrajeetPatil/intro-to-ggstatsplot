@@ -2,7 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.indrapatil.com/intro-to-ggstatsplot/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.indrapatil.com/intro-to-ggstatsplot/llms.txt</loc>
@@ -10,6 +12,6 @@
   </url>
   <url>
     <loc>https://www.indrapatil.com/intro-to-ggstatsplot/llms-full.txt</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-09-20</lastmod>
   </url>
 </urlset>
