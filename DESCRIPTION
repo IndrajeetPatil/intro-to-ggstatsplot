@@ -20,7 +20,7 @@ Depends:
     datasauRus (>= 0.1.9),
     downlit (>= 0.4.5),
     ggiraphExtra (>= 0.3.0),
-    ggstatsplot (>= 0.13.3),
+    ggstatsplot (>= 1.1.1),
     ggthemes (>= 6.0.0),
     knitr (>= 1.52),
     magrittr (>= 2.0.5),
