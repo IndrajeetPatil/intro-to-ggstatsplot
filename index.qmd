@@ -1040,14 +1040,13 @@ grouped_ggpiestats(
 
 By changing **theme** and **palette**
 
-```{.r code-line-numbers="5-7"}
+```{.r code-line-numbers="5-6"}
 ggbetweenstats(
   data = movies_long,
   x = mpaa,
   y = rating,
-  ggtheme = ggthemes::theme_economist(), 
-  palette = "Darjeeling2", 
-  package = "wesanderson" 
+  ggtheme = ggthemes::theme_economist(),
+  palette = "wesanderson::Darjeeling2"
 )
 ```
 
@@ -1063,9 +1062,8 @@ ggbetweenstats(
   data = movies_long,
   x = mpaa,
   y = rating,
-  ggtheme = ggthemes::theme_economist(), 
-  palette = "Darjeeling2", 
-  package = "wesanderson" 
+  ggtheme = ggthemes::theme_economist(),
+  palette = "wesanderson::Darjeeling2"
 )
 ```
 
