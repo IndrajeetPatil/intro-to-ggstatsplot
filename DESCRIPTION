@@ -2,14 +2,15 @@ Type: Presentation
 Package: intro-to-ggstatsplot
 Title: Statistical Visualizations with {ggstatsplot}: A Biography
 Version: 2.0
-Authors@R: 
-    person("Indrajeet", "Patil", , "patilindrajeet.science@gmail.com", role = c("cre", "aut", "cph"),
+Authors@R:
+    person("Indrajeet", "Patil", , "patilindrajeet.science@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0003-1995-6531"))
 Description: This presentation provides an introduction to the
-    `{ggstatsplot}` package.  This is not a package, and the DESCRIPTION
+    `{ggstatsplot}` package. This is not a package, and the DESCRIPTION
     file is included to make it easier to install required packages in
     GitHub Actions workflows.
 License: CC0 1.0 Universal
+Encoding: UTF-8
 URL: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/,
     https://www.indrapatil.com/intro-to-ggstatsplot/
 BugReports: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/issues
@@ -25,11 +26,7 @@ Depends:
     magrittr,
     packageRank,
     quarto,
-    reticulate,
     rstan,
     rstantools,
     statsExpressions,
     xml2
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
