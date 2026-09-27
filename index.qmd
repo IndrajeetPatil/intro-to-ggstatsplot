@@ -1175,11 +1175,11 @@ stats_expr <- ggpiestats(
 ) %>% 
   extract_subtitle()
 
-ggiraphExtra::ggSpine( 
+suppressWarnings(ggiraphExtra::ggSpine( 
   data = Titanic_full,
   aes(x = Sex, fill = Survived)
 ) +
-  labs(subtitle = stats_expr)  
+  labs(subtitle = stats_expr))  
 ```
 
 :::
@@ -1195,11 +1195,11 @@ stats_expr <- ggpiestats(
 ) %>% 
   extract_subtitle()
 
-ggiraphExtra::ggSpine( 
+suppressWarnings(ggiraphExtra::ggSpine( 
   data = Titanic_full,
   aes(x = Sex, fill = Survived)
 ) +
-  labs(subtitle = stats_expr) 
+  labs(subtitle = stats_expr)) 
 ```
 
 :::
