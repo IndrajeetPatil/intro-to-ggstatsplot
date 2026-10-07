@@ -80,9 +80,9 @@ scroll views. Normal builds omit the axe checker.
 
 Feedback and suggestions are welcome in [the issue tracker](https://github.com/IndrajeetPatil/intro-to-ggstatsplot/issues).
 
-## License
+## Licence
 
 Although the current repository is published under [CC0 1.0 Universal
-(CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/), this license
+(CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/), this licence
 **does not** cover third-party images in the `media/` folder. If you use them,
 follow the attribution policy stated by their respective sources.
