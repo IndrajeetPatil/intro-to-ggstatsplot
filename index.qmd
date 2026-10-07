@@ -460,7 +460,7 @@ flowchart LR
     statsExpressions --> performance
     statsExpressions --> bayestestR
     
-    %% Styling using custom colors
+    %% Styling using custom colours
     style easystats fill:#EED3B1
     
     classDef main fill:#FCF596,stroke:#333,stroke-width:3px
@@ -599,7 +599,7 @@ graph LR
     SoftSkills --> Leadership[Leadership]
     SoftSkills --> Communication[Communication]
 
-    %% Styling using colorblind-friendly palette
+    %% Styling using colourblind-friendly palette
     classDef mainNode fill:#FCF596,stroke:#000000,stroke-width:3px
     classDef broardSkillNode fill:#D0E8C5,stroke:#333,stroke-width:1px
     classDef skillNode fill:#ffffff,stroke:#333,stroke-width:1px,stroke-dasharray: 5 5
@@ -838,7 +838,7 @@ Hypothesis about correlation: Multiple numeric variables
 
 ```{r}
 #| label: "ggcorrmat_1"
-#| fig-alt: "Correlation matrix for numeric variables in the Star Wars dataset, using color and labels to show the direction and strength of relationships."
+#| fig-alt: "Correlation matrix for numeric variables in the Star Wars dataset, using colour and labels to show the direction and strength of relationships."
 ggcorrmat(dplyr::starwars)
 ```
 :::
@@ -1056,7 +1056,7 @@ ggbetweenstats(
 
 ```{r}
 #| label: "ggbetweenstats_4"
-#| fig-alt: "Movie rating distributions by MPAA category, demonstrating a custom Economist theme and Darjeeling color palette."
+#| fig-alt: "Movie rating distributions by MPAA category, demonstrating a custom Economist theme and Darjeeling colour palette."
 #| echo: false
 ggbetweenstats(
   data = movies_long,

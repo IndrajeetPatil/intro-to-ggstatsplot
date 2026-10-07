@@ -56,7 +56,7 @@ Check which set is present to know which language context applies.
 - **Inline styling.** Visual design uses inline `style` attributes on fenced divs with a small palette of background colours (e.g. `#e3f2fd`, `#e8f5e9`, `#fff3e0`, `#ffebee`, `#FFFBC1`, `#f8f9fa`). The CSS maps these to the custom theme. Do not change these colour values without updating `style.css`.
 - **Scroll-view image sizing.** Slides with top-level images that otherwise collapse in native `?view=scroll` use `.nostretch` and an explicit image `height` to preserve their live-slide dimensions. Check image visibility in both views when editing them.
 - **Image classes.** Images may use semantic classes (e.g. `.hero`, `.artifact`, `.illustration`) that control border, shadow, and rounding in `style.css`. Check the existing CSS before adding new image classes.
-- **Sources.** Every factual claim has a source citation at the bottom of its slide in a small-font centered div. Keep this pattern.
+- **Sources.** Every factual claim has a source citation at the bottom of its slide in a small-font centred div. Keep this pattern.
 - **Accessibility.** Images must have `fig-alt` text. Raw HTML widgets use `role="img"` and `aria-label`. Keep these.
   Verify with `just axe`, which appends an "Accessibility Report" slide listing axe-core violations. Keep `axe` in
   `_quarto-a11y.yml`, not `index.qmd`, so normal renders never ship the axe-core payload. The explicit `format:`
@@ -89,7 +89,7 @@ just update    # Update language dependencies to their latest versions
 just render    # Render index.qmd to _site/
 just preview   # Live-reload dev server
 just open      # Alias for preview (live-reload dev server over localhost)
-just clean     # Remove build artifacts
+just clean     # Remove build artefacts
 just check     # Verify Quarto setup
 just axe       # Preview with the axe accessibility checker enabled
 ```
@@ -134,3 +134,4 @@ When modifying `index.qmd`:
 - Do not commit `_site/`, `_extensions/`, or `.quarto/` (all gitignored). For Python decks, `.venv/` is also gitignored; for R decks, `renv/library/` and `renv/staging/` are gitignored.
 - Do not modify the reusable CI workflow inline; it lives in a separate repository.
 - Do not pin the first-party reusable workflow to a commit SHA; use `@main` (see CI/CD).
+- **Spelling and punctuation.** Use British spelling in prose (colour, licence, catalogue, artefact) and the Oxford comma in lists of three or more. Leave code, identifiers, file names, URLs, quotations, and proper names (`license` in YAML, `.well-known/api-catalog`) as they are.
