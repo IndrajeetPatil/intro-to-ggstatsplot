@@ -40,7 +40,7 @@ just install
 
 ```bash
 just help     # Show all available commands
-just install  # Install R dependencies and the a11y extension
+just install  # Install R dependencies and Quarto extensions
 just sync     # Alias for install
 just update   # Update R dependencies to their latest versions
 just render   # Render slides to HTML
@@ -86,3 +86,7 @@ Although the current repository is published under [CC0 1.0 Universal
 (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/), this licence
 **does not** cover third-party images in the `media/` folder. If you use them,
 follow the attribution policy stated by their respective sources.
+
+### Read aloud
+
+Requires Quarto 1.11.9 or newer. `just install` installs the [Read Aloud extension](https://github.com/IndrajeetPatil/quarto-read-aloud). Select the speaker icon to hear the current slide’s notes, or the stop icon to cancel. Changing slides also stops speech. Voice availability depends on your browser and operating system.
