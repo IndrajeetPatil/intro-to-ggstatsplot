@@ -16,11 +16,11 @@ URL: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/,
 BugReports: https://github.com/IndrajeetPatil/intro-to-ggstatsplot/issues
 Depends:
     R (>= 4.6.1),
-    bayestestR (>= 0.19.0),
+    bayestestR (>= 0.20.0),
     datasauRus (>= 0.1.9),
     downlit (>= 0.4.5),
     ggiraphExtra (>= 0.3.0),
-    ggstatsplot (>= 1.1.1),
+    ggstatsplot (>= 1.1.4),
     ggthemes (>= 7.0.0),
     knitr (>= 1.52),
     magrittr (>= 2.0.5),
@@ -28,5 +28,5 @@ Depends:
     quarto (>= 1.5.1),
     rstan (>= 2.32.7),
     rstantools (>= 2.7.1),
-    statsExpressions (>= 2.1.1),
+    statsExpressions (>= 2.2.1),
     xml2 (>= 1.6.0)
