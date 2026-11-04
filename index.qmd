@@ -80,9 +80,20 @@ Indrajeet Patil<br>
 Source code: [github.com/IndrajeetPatil/intro-to-ggstatsplot](https://github.com/IndrajeetPatil/intro-to-ggstatsplot){style="text-decoration: underline;"}
 :::
 
+::: {.notes}
+- Welcome attendees and introduce the talk on `{ggstatsplot}`.
+- Introduce myself and explain the perspective of the talk: an autobiographical retrospective charting the growth of an open-source statistical software package.
+- Direct attendees to the presentation repository on GitHub shown in the footer.
+:::
+
 # Genesis
 
 Why a new software?
+
+::: {.notes}
+- Open the Genesis section to explore the motivation for creating `{ggstatsplot}`.
+- Pose the framing question: why write and maintain a new R package when the R ecosystem already possesses powerful visualisation tools like `{ggplot2}`?
+:::
 
 ## Life in the trenches (c. 2017, Harvard) {.smaller}
 
@@ -134,12 +145,23 @@ How to:
 
 ::::
 
+::: {.notes}
+- Recount the academic research context circa 2017 at Harvard that precipitated the project.
+- Walk through the external stimulus on the left: widespread statistical reporting errors (Nuijten et al., 2016), frequent misinterpretation of nonsignificant p-values as absent effects (Aczel et al., 2018), and the broader replication crisis (Open Science Collaboration, 2015).
+- Connect this to the internal response on the right (captioned with the iconic "This is fine" meme): the urgent practical need to prevent transcription errors, report effect sizes with uncertainty, properly interpret null results, and make assumption checking routine.
+:::
+
 # Proposal
 
 Information-rich, ready-made statistical visualizations
 
 :::{style="font-size: 20px;"}
 (minimal effort and maximum transparency)
+:::
+
+::: {.notes}
+- Introduce the proposed philosophy: information-rich, ready-made statistical visualisations that combine plots and analysis into one artefact.
+- Stress the guiding mission: requiring minimal effort from users while delivering maximum transparency and methodological rigor.
 :::
 
 ## A visualization with statistical summary {.smaller .nostretch}
@@ -154,6 +176,12 @@ Information-rich, ready-made statistical visualizations
 
 :::footer
 [(Matejka & Fitzmaurice, *Autodesk Research*,2017)](https://www.autodeskresearch.com/publications/samestats)
+:::
+
+::: {.notes}
+- Demonstrate the animated Datasaurus Dozen (Matejka & Fitzmaurice, 2017) to illustrate why statistical summaries alone are perilous.
+- Explain that while each frame exhibits vastly different bivariate structures (including stars, circles, and a dinosaur), the means, standard deviations, and Pearson correlation coefficients remain virtually identical.
+- Emphasise the takeaway in the callout: graphical inspection surfaces vital anomalies, clustering, and non-linear patterns that summary metrics completely obscure.
 :::
 
 ## Ready-made plots with one-line syntax {.smaller}
@@ -201,12 +229,24 @@ The **grammar of graphics** framework can prepare **any** visualization! But bui
 
 :::::
 
+::: {.notes}
+- Acknowledge the unmatched flexibility of the Grammar of Graphics framework, as pioneered by Leland Wilkinson and implemented in Hadley Wickham's `{ggplot2}`.
+- Discuss the practical trade-off: assembling sophisticated, publication-ready composite plots from individual geoms, themes, annotations, and statistical computations takes substantial time and code.
+- Reference the treadmill cat animation to illustrate researcher exhaustion when recreating repetitive plotting pipelines.
+- Highlight the core solution: ready-made plotting functions dramatically lower the activation energy required to thoroughly visualise data.
+:::
+
 # Action Plan
 
 `{ggstatsplot}` was born!
 
 :::{style="font-size: 20px;"}
 (open-sourced on [GitHub](https://github.com/IndrajeetPatil/ggstatsplot) in 2017; still actively developed)
+:::
+
+::: {.notes}
+- Announce the creation and open-sourcing of `{ggstatsplot}` on GitHub in 2017.
+- Mention that the package remains actively developed, continuously incorporating community feedback and modern R standards.
 :::
 
 ## Example function {.smaller}
@@ -262,6 +302,13 @@ ggbetweenstats(iris, Species, Sepal.Length)
 
 ::::
 
+::: {.notes}
+- Walk through the flagship example using `ggbetweenstats(iris, Species, Sepal.Length)`.
+- Point out how a single function call creates an entire multilayered composite plot: violin plots showing distribution densities, box plots indicating quartiles, jittered raw data points, mean markers, and pairwise comparisons.
+- Review the information-rich defaults in the right column: automatic calculation of test statistics, effect sizes with confidence intervals, and Bayesian evidence expressions.
+- Note the four interchangeable statistical approaches available: parametric, non-parametric, robust, and Bayesian.
+:::
+
 ## And there is more! {.smaller .nostretch}
 
 ![](media/collage.webp){height="575" style="max-width: 100%;" fig-alt="Examples of ggstatsplot output: stacked bars, regression coefficients, correlation matrix, histogram, grouped pie charts, and a scatterplot with marginal distributions."}
@@ -270,9 +317,20 @@ ggbetweenstats(iris, Species, Sepal.Length)
 [Appendix](https://www.indrapatil.com/intro-to-ggstatsplot/#/examples-of-other-functions) provides more details.
 :::
 
+::: {.notes}
+- Present the overview collage displaying the breadth of chart types provided by `{ggstatsplot}`.
+- Highlight the diverse statistical templates: stacked bar charts, regression coefficients, correlation matrices, histograms, grouped pie charts, and scatterplots with marginal distributions.
+- Note that the appendix contains dedicated interactive examples for each of these specialised functions.
+:::
+
 # Promised Land
 
 Does it deliver?
+
+::: {.notes}
+- Open the Promised Land section to evaluate whether the package achieves its design goals.
+- Frame the evaluation criteria: does it genuinely prevent reporting errors, simplify analysis workflows, and follow statistical best practices?
+:::
 
 ## Show, don't tell {.smaller}
 
@@ -308,6 +366,13 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 ✅ No need to worry about reporting or interpretation errors!
 
+:::
+
+::: {.notes}
+- Contrast the traditional reporting approach on the left with the integrated `{ggstatsplot}` visualisation on the right.
+- Walk through the left column: a dense narrative paragraph of test statistics ($t(140) = -0.76, p = 0.446, r = -0.06$) that is tedious to compose and rife with opportunities for transcription errors.
+- Walk through the right column: the Datasaurus scatterplot with marginal histograms and embedded subtitle annotations, which immediately reveals that the data form a dinosaur shape rather than random bivariate noise.
+- Emphasise how visual presentation protects researchers from publishing misleading or erroneous claims.
 :::
 
 ## Thoughtful Defaults {.smaller}
@@ -351,9 +416,21 @@ probable under the null hypothesis as compared to the alternative hypothesis. Th
 
 :::
 
+::: {.notes}
+- Discuss the research foundations underlying the package defaults across two pillars.
+- On data visualisation (left column): design choices rooted in seminal texts by Stephen Few, Edward Tufte, William Cleveland, and Claus Wilke to maximise data-to-ink ratio and visual honesty.
+- On statistical reporting (right column): rigorous adherence to APA 7th edition guidelines and Van Doorn et al. (2020) recommendations for comprehensive Bayesian and frequentist summaries.
+- Reiterate that default outputs are publication-ready without requiring manual cosmetic adjustments.
+:::
+
 # Impact
 
 *I can haz users?!*
+
+::: {.notes}
+- Introduce the Impact section exploring the reach and reception of `{ggstatsplot}`.
+- Preview the empirical usage statistics across downloads, citations, and community awards.
+:::
 
 ## User Love {.smaller}
 
@@ -423,9 +500,21 @@ biology, medicine, psychology, economics, etc.
 
 ::::
 
+::: {.notes}
+- Walk through the user adoption metrics displayed across both columns.
+- Left column: over 800,000 CRAN downloads placing the package in the 97th percentile of all R packages, and ranking as the second most-starred `{ggplot2}` extension on GitHub with around 2,000 stars.
+- Right column: over 1,400 academic citations spanning psychology, medicine, biology, and economics for the Journal of Open Source Software paper.
+- Mention winning the 2020 Society for the Improvement of Psychological Science (SIPS) Mission Award for contributions to research transparency.
+:::
+
 # Pleasant Side Effects
 
 *Maybe the real treasure was the skills we acquired along the way!*
+
+::: {.notes}
+- Introduce the Pleasant Side Effects section.
+- Frame the personal and professional journey: how maintaining a high-impact package drove major software engineering skill acquisition and community leadership.
+:::
 
 ## Software Architecture {.smaller}
 
@@ -469,6 +558,13 @@ flowchart LR
     class ggstatsplot main
     class note note
 ```
+
+::: {.notes}
+- Walk through the major architectural refactoring of `{ggstatsplot}`.
+- Explain how a 20,000-line monolithic codebase was decomposed down to approximately 1,000 lines of glue code by extracting computational engines.
+- Walk through the Mermaid diagram: `{ggstatsplot}` interfaces with `{statsExpressions}` as its computational backend, which delegates to specialised packages in the `{easystats}` ecosystem (`{effectsize}`, `{insight}`, `{parameters}`, `{performance}`, `{bayestestR}`).
+- Emphasise how modular separation of concerns makes both packages significantly easier to test, benchmark, and maintain.
+:::
 
 
 ## Collaborative Solutions {.smaller}
@@ -525,6 +621,13 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ::::
 
+::: {.notes}
+- Discuss the shift towards contributing upstream to strengthen foundational dependencies.
+- Highlight involvement in the `{easystats}` core team: shaping long-term architecture, API standards, CI pipelines, and mentorship.
+- Point out broader ecosystem stewardship in the lower columns: co-maintaining `{ggsignif}`, contributing to `{WRS2}` and `{ggcorrplot}`, and co-authoring core developer tools `{lintr}` and `{styler}`.
+- Stress that open-source sustainability relies on investing in shared upstream infrastructure.
+:::
+
 ## Quality Assurance {.smaller}
 
 > "_The only way to go fast, is to go well._"<br>
@@ -569,11 +672,23 @@ While re-architecting `{ggstatsplot}`, I started contributing upstream.
 
 ::::
 
+::: {.notes}
+- Open with Robert C. Martin's adage: "The only way to go fast, is to go well."
+- Detail the rigorous CI checks executed on GitHub Actions: randomised unit testing, 100% test coverage, zero linter warnings, automated code formatting, link rot prevention, and multi-platform CRAN validation across Linux, macOS, and Windows.
+- Point out the active contribution graph (2018–2024) and the pull request status badge showing 24 passing checks, demonstrating how automated quality gates ensure steady, regression-free development.
+:::
+
 ## Communication {.smaller .nostretch}
 
 [Training material](https://www.indrapatil.com/presentations/) on best practices in software/package development to support community contributions keeping in mind the diverse backgrounds of contributors.
 
 ![](media/presentations.webp){.relative fig-align="center" height="500" fig-alt="Four training decks cover preventive care, DRY development, naming, and snapshot testing for R packages."}
+
+::: {.notes}
+- Discuss the educational mission to empower contributors from diverse, non-computer-science backgrounds.
+- Showcase the four training slide decks on software engineering best practices: preventive R package care, DRY package development, naming conventions, and snapshot testing.
+- Emphasise that accessible documentation and clear contributor guidance transform passive users into active open-source co-maintainers.
+:::
 
 ## Biography (2017-) {.smaller}
 
@@ -609,9 +724,22 @@ graph LR
     class CodeQuality,ArchDesign,TechDebt,Collab,Leadership,Communication skillNode
 ```
 
+::: {.notes}
+- Walk through the autobiographical concept diagram illustrating dual trajectories of developer growth since 2017.
+- Detail the technical branch: mastering code quality standards, modular system architecture, and systematic technical debt reduction.
+- Detail the soft skills branch: fostering cross-team collaboration, leading distributed volunteer teams, and communicating technical ideas effectively.
+- Conclude that maintaining an open-source project serves as an exceptional long-term crucible for engineering leadership.
+:::
+
 # Conclusion
 
 `{ggstatsplot}` offers an <span style="background-color:#D0E8C5;">intuitive interface</span> for creating detailed statistical visualizations, enabling users to adopt <span style="background-color:#FFE31A;">rigorous, reliable, and robust workflows for data exploration and reporting</span> across various academic and industrial disciplines. It is a well-maintained tool with <span style="background-color:#F0C1E1;">high-quality infrastructure</span> and <span style="background-color:#D4F6FF;">widespread adoption</span>.
+
+::: {.notes}
+- Summarise the central conclusions of the presentation.
+- Highlight the highlighted themes: intuitive user interface, robust and reproducible data analysis workflows, high-calibre software engineering infrastructure, and widespread community adoption.
+- Reiterate that combining visual exploration with statistical reporting makes scientific findings both more transparent and more reproducible.
+:::
 
 # Thank You 😊
 
@@ -630,10 +758,16 @@ Check out my other [slide decks](https://www.indrapatil.com/presentations/) on s
 
 <a class="deck-icon-link" href="https://www.linkedin.com/in/indrajeet-patil-ph-d-397865174/" aria-label="LinkedIn"><span class="deck-icon deck-icon-brands-linkedin" aria-hidden="true"></span></a>
 &nbsp;&nbsp;
-<a class="deck-icon-link" href="http://github.com/IndrajeetPatil" aria-label="GitHub"><span class="deck-icon deck-icon-brands-github" aria-hidden="true"></span></a>
+<a class="deck-icon-link" href="https://github.com/IndrajeetPatil" aria-label="GitHub"><span class="deck-icon deck-icon-brands-github" aria-hidden="true"></span></a>
 &nbsp;&nbsp;
 <a class="deck-icon-link" href="mailto:patilindrajeet.science@gmail.com" aria-label="Email"><span class="deck-icon deck-icon-solid-envelope" aria-hidden="true"></span></a>
 
+:::
+
+::: {.notes}
+- Thank attendees for their time and interest in `{ggstatsplot}`.
+- Encourage them to review companion presentations on package development best practices.
+- Share contact channels for collaboration, bug reports, and discussion via LinkedIn, GitHub, and email.
 :::
 
 ## Session information {.smaller}
@@ -642,9 +776,24 @@ Check out my other [slide decks](https://www.indrapatil.com/presentations/) on s
 sessioninfo::session_info(include_base = TRUE)
 ```
 
+::: {.notes}
+- Display the computational environment captured via `sessioninfo::session_info(include_base = TRUE)`.
+- Explain that archiving complete dependency trees and platform details guarantees long-term computational reproducibility.
+:::
+
 # Appendix
 
+::: {.notes}
+- Welcome audience to the Appendix.
+- Mention that subsequent slides provide deep-dive demonstrations into each plotting function, grouped variants, customisation techniques, and statistical paradigms.
+:::
+
 # Examples of other functions
+
+::: {.notes}
+- Introduce the function gallery section showcasing specific statistical visualisation tools available in `{ggstatsplot}`.
+- Explain that each upcoming slide demonstrates syntax, default visualisations, and supported statistical paradigms for a distinct analytical scenario.
+:::
 
 ## `ggwithinstats()` {.smaller}
 
@@ -690,6 +839,12 @@ ggwithinstats(
 :::
 
 ::::
+
+::: {.notes}
+- Walk through `ggwithinstats()` for repeated-measures designs using `WRS2::WineTasting` (comparing wine `Taste` across `Wine` types).
+- Highlight visual features: individual trajectories connected across conditions, box plots, violin densities, and red mean points.
+- Review default outputs: parametric repeated-measures ANOVA by default, effect sizes with confidence intervals, pairwise comparisons, and Bayesian test statistics.
+:::
 
 ## `gghistostats()` {.smaller}
 
@@ -737,6 +892,12 @@ gghistostats(
 
 ::::
 
+::: {.notes}
+- Walk through `gghistostats()` evaluating the distribution of movie `budget` from `movies_long` against a test reference value of 30 (`test.value = 30`).
+- Point out automatic features: frequency bins with proportion labels, overlaid density curve, test value marker, and one-sample test statistics with Bayes factor.
+- Note availability of parametric, non-parametric, robust, and Bayesian one-sample tests.
+:::
+
 ## `ggdotplotstats()` {.smaller}
 
 Labeled numeric variable
@@ -783,6 +944,12 @@ ggdotplotstats(
 
 ::::
 
+::: {.notes}
+- Walk through `ggdotplotstats()` displaying movie `budget` by `genre` from `movies_long`, compared against a reference threshold of 30.
+- Explain why dot plots are preferred over bar charts for labelled numeric data: lower visual clutter and higher data clarity.
+- Point out summary metrics, uncertainty intervals, and one-sample test details displayed in the subtitle.
+:::
+
 ## `ggscatterstats()` {.smaller}
 
 Hypothesis about correlation: Two numeric variables
@@ -828,6 +995,12 @@ ggscatterstats(
 
 ::::
 
+::: {.notes}
+- Walk through `ggscatterstats()` assessing bivariate correlation between movie `budget` and `rating` in `movies_long`.
+- Highlight composite structure: central scatterplot with linear regression fit and confidence band, accompanied by top and right marginal density histograms.
+- Note the subtitle detailing Pearson correlation ($r$), sample size ($n$), confidence intervals, and Bayesian evidence in favour of or against the relationship.
+:::
+
 ## `ggcorrmat()` {.smaller}
 
 Hypothesis about correlation: Multiple numeric variables
@@ -866,6 +1039,12 @@ ggcorrmat(dplyr::starwars)
 :::
 
 ::::
+
+::: {.notes}
+- Walk through `ggcorrmat(dplyr::starwars)` calculating and visualizing pairwise correlations across all numeric variables in a dataset.
+- Point out the correlation matrix layout: colour gradient indicating correlation sign and magnitude, significance filtering, and robust handling of missing values (`NA`).
+- Mention that partial correlations and multiple comparison adjustments are supported out of the box.
+:::
 
 
 ## `ggpiestats()` {.smaller}
@@ -906,6 +1085,12 @@ ggpiestats(
 
 ::::
 
+::: {.notes}
+- Walk through `ggpiestats()` examining categorical associations between transmission type (`am`) and cylinder count (`cyl`) in `mtcars`.
+- Point out slice percentages, category counts, and Pearson's chi-squared test of independence in the subtitle.
+- Mention embedded goodness-of-fit tests for individual slices and Bayesian contingency table statistics.
+:::
+
 ## `ggbarstats()` {.smaller}
 
 Hypothesis about composition of categorical variables
@@ -943,6 +1128,12 @@ ggbarstats(
 :::
 
 ::::
+
+::: {.notes}
+- Walk through `ggbarstats()` displaying the same categorical association between `am` and `cyl` as a 100% stacked bar chart.
+- Contrast with pie charts: stacked bars often allow more accurate perceptual comparison of category proportions while conveying identical statistical tests.
+- Reiterate that both `ggpiestats()` and `ggbarstats()` share identical arguments and statistical backends.
+:::
 
 ## `ggcoefstats()` {.smaller}
 
@@ -984,10 +1175,21 @@ Meta-analysis is also supported!
 
 ::::
 
+::: {.notes}
+- Walk through `ggcoefstats(mod)` displaying model parameters from a linear model (`lm(rating ~ mpaa, data = movies_long)`).
+- Highlight visual features: point estimates with confidence intervals, intercept and factor level comparisons, and test statistics ($t$, $z$, $F$, $\chi^2$) alongside AIC and BIC indices.
+- Emphasise that via `{insight}`, `ggcoefstats()` supports hundreds of model classes across the R ecosystem, as well as meta-analytic models.
+:::
+
 
 # *grouped\_* variants
 
 Iterating over a grouping variable
+
+::: {.notes}
+- Introduce `grouped_` variants: convenience wrapper functions that apply statistical visualizations across levels of a grouping factor.
+- Explain that these eliminate the need to write manual `purrr::map()` loops or complex facet pipelines for exploratory analysis.
+:::
 
 ## *grouped\_* functions {.smaller}
 
@@ -1025,10 +1227,20 @@ grouped_ggpiestats(
 
 ::::
 
+::: {.notes}
+- Walk through `grouped_ggpiestats(data = mtcars, x = cyl, grouping.var = am)`.
+- Explain how the function automatically splits the dataset by `am` (transmission type), generates independent pie charts for each subset, and combines them into a single coherent figure.
+- Review the callout listing available `grouped_` variants for every primary function in the package.
+:::
 
 # Customizability
 
 "What if I don't like the default plots?" 🤔
+
+::: {.notes}
+- Introduce the Customizability section addressing user desires to tailor plot aesthetics, colour palettes, and statistical output.
+- Emphasise that `{ggstatsplot}` defaults are opinions, not mandates; every visual and statistical element remains fully configurable.
+:::
 
 ## Modify the look 🎨 {.smaller}
 
@@ -1109,6 +1321,13 @@ ggbetweenstats(
 :::
 
 ::::
+
+::: {.notes}
+- Walk through aesthetic customisation using theme and palette arguments:
+  - First example: passing `ggtheme = ggthemes::theme_economist()` and `palette = "wesanderson::Darjeeling2"` to `ggbetweenstats()`.
+  - Second example: composing with native `{ggplot2}` functions, such as appending `scale_y_continuous(sec.axis = dup_axis())` to add a secondary axis to Bayesian output.
+- Stress that returned objects are native `{ggplot2}` plots that support any standard ggplot geoms, scales, or theme modifications.
+:::
 
 
 
@@ -1206,8 +1425,18 @@ suppressWarnings(print(ggiraphExtra::ggSpine(
 
 ::::
 
+::: {.notes}
+- Explain how to tune the density of information when full statistical annotations are not desired.
+- Top example: turning off statistical displays using `centrality.plotting = FALSE`, `results.subtitle = FALSE`, `bf.message = FALSE`, and `pairwise.display = "none"` to obtain a clean, publication-ready base plot.
+- Bottom example: extracting statistical expressions using `extract_subtitle()` on `ggpiestats(Titanic_full, Survived, Sex)` and reusing that formatted subtitle in alternative visualisations, such as `ggiraphExtra::ggSpine()`.
+:::
 
 # `{ggstatsplot}`: Details about statistical reporting 
+
+::: {.notes}
+- Transition to the detailed statistical reporting section.
+- Frame the methodological core: providing comprehensive, unified support for multiple statistical paradigms across all package functions.
+:::
 
 ## Supports different statistical approaches {.smaller}
 
@@ -1226,6 +1455,12 @@ suppressWarnings(print(ggiraphExtra::ggSpine(
 | `ggcoefstats()`                      | Regression modeling                               | ✅         | ✅             | ✅     | ✅       |
 | `ggcoefstats()`                      | Random-effects meta-analysis                      | ✅         | `NA`           | ✅     | ✅       |
 
+:::
+
+::: {.notes}
+- Walk through the function-by-approach compatibility table.
+- Highlight that across between-group comparisons, within-group tests, distributions, correlations, and regressions, users can switch between parametric, non-parametric, robust, and Bayesian frameworks.
+- Point out where specific combinations are non-applicable (e.g. non-parametric or robust tests for categorical contingency tables).
 :::
 
 ## Toggling statistical approaches 🔀 {.smaller}
@@ -1297,6 +1532,12 @@ gghistostats(
 
 ::::
 
+::: {.notes}
+- Demonstrate how seamless it is to toggle statistical paradigms in code.
+- Contrast the parametric column (`type = "p"`) on the left with the non-parametric column (`type = "np"`) on the right across ANOVA (`ggbetweenstats`), correlation (`ggscatterstats`), and one-sample tests (`gghistostats`).
+- Emphasise the cognitive savings: researchers only need to change the `type` argument, without learning entirely different packages or altering their data format.
+:::
+
 
 ## Alternative: Pure Pain {.smaller}
 
@@ -1344,6 +1585,13 @@ gghistostats(
 
 ::::
 
+::: {.notes}
+- Contrast the unified `{ggstatsplot}` API with the status quo across two pain points.
+- Left column (hunting for packages): assembling an analysis requires stitching together `{stats}`, `{effectsize}`, `{skimr}`, `{multcomp}`, `{BayesFactor}`, and `{bayestestR}`.
+- Right column (inconsistent APIs): juggling conflicting input requirements (vectors vs matrices vs tibbles), differing return types, and incompatible missing-value policies.
+- Humourous illustrations highlight the friction and cognitive load `{ggstatsplot}` removes.
+:::
+
 ## Benefits in details {.smaller}
 
 `{ggstatsplot}` combines data visualization and statistical analysis in a single step.
@@ -1382,6 +1630,17 @@ It...
 
 :::
 
+::: {.notes}
+- Review the comprehensive benefits summary:
+  - Ready-made plots with information-rich defaults.
+  - Substantial reduction in statistical reporting and transcription errors.
+  - Strict compliance with data visualisation and reporting standards.
+  - Contextual evaluation of statistical models against raw data distributions.
+  - Prominent emphasis on effect sizes and uncertainty.
+  - Seamless evaluation of null results via Bayes factors.
+  - Beginner-friendly syntax for novice and expert analysts alike.
+:::
+
 ## Simplified data analysis workflow {.smaller .nostretch}
 
 ![](media/ds_workflow.webp){height="330" style="max-width: 100%;" fig-alt="Data analysis proceeds from import and tidying into an iterative cycle of transformation, visualization, and modeling, followed by communication."}
@@ -1398,6 +1657,11 @@ It...
 
 :::
 
+::: {.notes}
+- Revisit the classic data science workflow diagram from Grolemund & Wickham (2017): import, tidy, transform-visualise-model, and communicate.
+- Explain how `{ggstatsplot}` collapses the iterative transform-visualise-model loop into a single step, giving instant visual and statistical feedback.
+- Emphasise that faster iteration accelerates hypothesis generation and scientific discovery.
+:::
 
 ## Community Involvement {.smaller}
 
@@ -1414,6 +1678,12 @@ It...
 - Usage in a wide [range of fields](https://scholar.google.com/scholar?hl=en&scisbd=1&as_sdt=0%2C22&q=ggstatsplot&btnG=): psychology, biology, medicine, economics, etc.
 
 - Usage in data science training programs
+
+::: {.notes}
+- Review indicators of community adoption and engagement.
+- Highlight open-source collaboration metrics: 11 direct code contributors and 7 reverse CRAN dependencies.
+- Mention active external adoption: community YouTube tutorials, extensive StackOverflow Q&A, and broad usage across psychology, medicine, biology, and economics.
+:::
 
 ## A grain of salt {.smaller}
 
@@ -1436,3 +1706,9 @@ It...
 :::
 
 ::::
+
+::: {.notes}
+- Conclude with an essential methodological caveat: Richard McElreath's "Golem of Prague" metaphor from *Statistical Rethinking*.
+- Explain that statistical software is like a mythical golem: powerful and obedient, but utterly lacking scientific context or intent.
+- Caution attendees against mindless application of statistical tests: no software substitute exists for thoughtful experimental design, critical evaluation of assumptions, and domain understanding.
+:::
