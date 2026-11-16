@@ -28,5 +28,5 @@ Depends:
     quarto (>= 1.5.1),
     rstan (>= 2.32.7),
     rstantools (>= 2.7.1),
-    statsExpressions (>= 2.2.1),
+    statsExpressions (>= 2.2.2),
     xml2 (>= 1.6.0)
