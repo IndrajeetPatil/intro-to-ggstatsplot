@@ -34,11 +34,21 @@
 }
 
 /* Keep unselected lines readable; emphasize selected lines with a background. */
-.reveal .slides div.sourceCode pre code.has-line-highlights > span:not(.highlight-line) {
+.reveal
+  .slides
+  div.sourceCode
+  pre
+  code.has-line-highlights
+  > span:not(.highlight-line) {
   opacity: 1;
 }
 
-.reveal .slides div.sourceCode pre code.has-line-highlights > span.highlight-line {
+.reveal
+  .slides
+  div.sourceCode
+  pre
+  code.has-line-highlights
+  > span.highlight-line {
   background-color: #f4f7fb;
   box-shadow: inset 3px 0 #315e86;
 }
